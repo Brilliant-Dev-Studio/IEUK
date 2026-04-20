@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --ieuk-blush: #fff0f3;
+    --ieuk-burgundy: #5d1420;
+    --ieuk-burgundy-deep: #60101d;
+  }
+
+  body {
+    @apply m-0 antialiased text-neutral-800;
+    font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+    background-color: var(--ieuk-blush);
+  }
+
+  #root {
+    @apply min-h-dvh w-full;
+    background-color: var(--ieuk-blush);
+  }
+}
+
+@media (pointer: coarse) {
+  .cursor-follower {
+    display: none;
+  }
+}
