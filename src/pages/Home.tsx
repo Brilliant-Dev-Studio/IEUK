@@ -102,12 +102,12 @@ export default function Home() {
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[42%]"
             aria-hidden
           >
-            <div className="h-[min(72vw,280px)] w-[min(72vw,280px)] rounded-full bg-white shadow-[0_12px_40px_rgba(93,20,32,0.08)]" />
+            <div className="h-[min(78vw,320px)] w-[min(78vw,320px)] rounded-full bg-white shadow-[0_12px_40px_rgba(93,20,32,0.08)]" />
           </div>
           <img
             src={images.homeHero}
             alt="Learners and educators collaborating, representing IEUK’s global English community"
-            className="relative z-10 max-h-[min(58vw,260px)] w-auto rounded-2xl object-cover object-center shadow-md sm:max-h-[280px]"
+            className="relative z-10 max-h-[min(64vw,300px)] w-auto rounded-2xl object-cover object-center shadow-md sm:max-h-[320px]"
             width={600}
             height={400}
             fetchPriority="high"

@@ -1,12 +1,14 @@
+import logo from '../assets/IEUK_Logo.jpg';
+import homeHero from '../assets/1. Home Page Photos/1 Home Page.jpg';
+
 export const images = {
-  logo: 'https://raw.githubusercontent.com/Brilliant-Dev-Studio/IEUK-Assets/main/IEUK_Logo.jpg',
+  logo,
   /** Global learning & communication — hero */
-  homeHero:
-    'https://cdn.statically.io/gh/Brilliant-Dev-Studio/IEUK-Assets/main/1.%20Home%20Page%20Photos/1%20Home%20Page.jpg',
+  homeHero,
   /** Quality & academic excellence — supporting visual */
-  homeSecondary:
-    'https://cdn.statically.io/gh/Brilliant-Dev-Studio/IEUK-Assets/main/1.%20Home%20Page%20Photos/1%20Home%20Page.jpg',
+  homeSecondary: homeHero,
   /** Teaching & professional development — overlay cards */
-  homeSpotlight:
-    'https://cdn.statically.io/gh/Brilliant-Dev-Studio/IEUK-Assets/main/1.%20Home%20Page%20Photos/1%20Home%20Page.jpg',
-}
+  homeSpotlight: homeHero,
+} as const;
+
+export type ImageKey = keyof typeof images;
