@@ -4,9 +4,9 @@ import { ChevronRight } from 'lucide-react'
 import { NavLink } from 'react-router-dom'
 import { images } from '../data/images'
 
-type NavItem = { to: string; label: string; end?: boolean }
+export type NavItem = { to: string; label: string; end?: boolean }
 
-const navLinks: NavItem[] = [
+export const navLinks: NavItem[] = [
   { to: '/', label: 'Home', end: true },
   { to: '/about', label: 'About Us' },
   { to: '/accreditation', label: 'Accreditation' },
@@ -116,7 +116,7 @@ export default function Header() {
         menuOpen ? 'z-[120]' : 'z-30',
       ].join(' ')}
     >
-      <div className="mx-auto flex h-[84px] max-w-6xl items-center justify-between px-3 sm:px-5">
+      <div className="flex h-[84px] w-full items-center justify-between px-4 sm:px-5 md:px-10 lg:px-[50px]">
         <NavLink to="/" className="flex shrink-0 items-center gap-2 outline-offset-4" onClick={closeMenu}>
           <img src={images.logo} alt="IEUK Logo" className="w-[150px]" />
         </NavLink>

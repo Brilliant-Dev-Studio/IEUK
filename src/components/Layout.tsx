@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom'
+import Footer from './Footer'
 import Header from './Header'
 
 export default function Layout() {
@@ -7,10 +8,11 @@ export default function Layout() {
       <Header />
       <main
         id="site-main"
-        className="mx-auto w-full max-w-6xl flex-1 overflow-x-hidden px-4 py-8 pb-14 sm:px-5"
+        className="w-full flex-1 overflow-x-hidden px-4 py-8 pb-14 sm:px-5 md:px-10 lg:px-[50px]"
       >
         <Outlet />
       </main>
+      <Footer />
     </div>
   )
 }
