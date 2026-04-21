@@ -56,4 +56,19 @@
       transition: none;
     }
   }
+
+  .ieuk-frame {
+    padding: 1px;
+    background: linear-gradient(
+      90deg,
+      rgba(93, 20, 32, 0.55),
+      rgba(11, 47, 115, 0.55),
+      rgba(93, 20, 32, 0.55)
+    );
+  }
+
+  .ieuk-frame > img {
+    display: block;
+    background: #fff;
+  }
 }

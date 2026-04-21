@@ -32,12 +32,13 @@ export default function Footer() {
                 International English UK
               </p>
               <p className="text-center text-sm leading-relaxed text-white/85 lg:text-left">
-                Committed to quality, empowering educators, and inspiring learners worldwide.
+                Committed to quality, empowering educators, and inspiring
+                learners worldwide.
               </p>
-              <div className="mx-auto mt-5 h-px w-16 bg-white/15 lg:mx-0" aria-hidden />
-              <p className="mt-4 hidden text-center text-[12px] leading-relaxed text-white/70 sm:block lg:text-left">
-                Registered in England &amp; Wales: <span className="font-semibold text-white/80">05120951</span>
-              </p>
+              <div
+                className="mx-auto mt-5 h-px w-16 bg-white/15 lg:mx-0"
+                aria-hidden
+              />
             </div>
 
             <div className="lg:col-span-7">
@@ -57,22 +58,20 @@ export default function Footer() {
               </div>
 
               <div className="mt-7 hidden lg:block">
-                <div className="mt-6 grid grid-cols-12 items-start gap-6">
-                 
-               
-                </div>
+                <div className="mt-6 grid grid-cols-12 items-start gap-6"></div>
               </div>
             </div>
           </div>
 
-          <p className="mt-10 border-t border-white/20 pt-6 text-center text-[11px] leading-relaxed text-white/65">
-            © International English UK (IEUK). All Rights Reserved.
-          </p>
-
-         
+          <div className="mt-10 space-y-4 text-center">
+            <p className="border-t border-white/20 pt-6 text-[11px] leading-relaxed text-white/65">
+              Registered in England &amp; Wales:{" "}
+              <span className="font-semibold text-white/80">05120951</span>   ©
+              International English UK (IEUK). All Rights Reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
   );
 }
-

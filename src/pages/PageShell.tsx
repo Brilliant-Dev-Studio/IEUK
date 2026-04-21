@@ -7,7 +7,7 @@ type PageShellProps = {
 
 export default function PageShell({ title, children }: PageShellProps) {
   return (
-    <article className="mx-auto max-w-2xl">
+    <article className="w-full">
       <h1 className="mb-4 mt-0 text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
         {title}
       </h1>
