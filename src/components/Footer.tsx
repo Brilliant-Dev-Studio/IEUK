@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 import { navLinks } from "./Header";
 import { images } from "../data/images";
-import powerby from "../assets/powerby-removebg-preview.png";
 
 export default function Footer() {
   return (
     <footer className="relative mt-4 w-full overflow-hidden py-10 text-white">
       <div
-        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#60101d] via-[#4a0d17] to-[#2a070e]"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#0B2F73] via-[#08285f] to-[#061d45]"
         aria-hidden
       />
       <div
@@ -58,21 +57,8 @@ export default function Footer() {
               </div>
 
               <div className="mt-7 hidden lg:block">
-                <div className="h-px w-full bg-white/15" aria-hidden />
                 <div className="mt-6 grid grid-cols-12 items-start gap-6">
-                  <div className="col-span-7">
-                    <p className="text-sm font-semibold text-white/90">Need help or want to learn more?</p>
-                    <p className="mt-2 text-sm leading-relaxed text-white/75">
-                      Explore membership details or reach out via our{" "}
-                      <Link
-                        to="/contact"
-                        className="text-white/85 underline underline-offset-4 hover:text-white"
-                      >
-                        contact page
-                      </Link>{" "}
-                      — we’ll guide you to the right path.
-                    </p>
-                  </div>
+                 
                
                 </div>
               </div>
@@ -83,24 +69,7 @@ export default function Footer() {
             © International English UK (IEUK). All Rights Reserved.
           </p>
 
-          <a
-            href="https://brilliantdevstudio.online/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center justify-center gap-3 rounded-sm px-2 py-1 text-white/55 transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            aria-label="Powered by Brilliant Dev Studio"
-          >
-            <span className="text-[10px] font-semibold uppercase tracking-[0.22em]">
-              Powered By
-            </span>
-            <img
-              src={powerby}
-              alt="Brilliant Dev Studio"
-              className="h-6 w-auto opacity-40"
-              loading="lazy"
-              decoding="async"
-            />
-          </a>
+         
         </div>
       </div>
     </footer>

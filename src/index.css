@@ -28,6 +28,13 @@
 
 @layer utilities {
   .ieuk-reveal {
+    /* Default: visible (avoids blank UI if JS/motion APIs fail). */
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  html.ieuk-animate .ieuk-reveal {
     opacity: 0;
     transform: translate3d(0, 12px, 0);
     transition:
@@ -37,13 +44,13 @@
     will-change: opacity, transform;
   }
 
-  .ieuk-reveal.ieuk-inview {
+  html.ieuk-animate .ieuk-reveal.ieuk-inview {
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .ieuk-reveal {
+    html.ieuk-animate .ieuk-reveal {
       opacity: 1;
       transform: none;
       transition: none;

@@ -60,13 +60,25 @@ export default function Home() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches) return;
+    const reduceMotion = !!window.matchMedia?.(
+      "(prefers-reduced-motion: reduce)"
+    )?.matches;
+
+    // Enable reveal animations only when motion is allowed.
+    const rootEl = document.documentElement;
+    if (!reduceMotion) rootEl.classList.add("ieuk-animate");
+    else rootEl.classList.remove("ieuk-animate");
 
     const root = rootRef.current;
     if (!root) return;
 
     const nodes = Array.from(root.querySelectorAll<HTMLElement>(".ieuk-reveal"));
     if (nodes.length === 0) return;
+
+    if (reduceMotion) {
+      for (const el of nodes) el.classList.add("ieuk-inview");
+      return;
+    }
 
     let observer: IntersectionObserver | null = null;
     if (typeof IntersectionObserver !== "undefined") {
@@ -117,14 +129,6 @@ export default function Home() {
             className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/55 via-black/10 to-transparent"
             aria-hidden
           />
-          <div className="pointer-events-none absolute left-4 top-4 sm:left-6 sm:top-6">
-            <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-white/90 drop-shadow-sm">
-              Welcome
-            </p>
-            <p className="mt-1 text-sm font-semibold text-white/95 drop-shadow-sm sm:text-[15px]">
-              to International English UK
-            </p>
-          </div>
         </figure>
 
         <p className="ieuk-reveal mb-3 inline-block border-b-2 border-[#5d1420] pb-1 text-[11px] font-bold uppercase tracking-[0.18em] text-[#5d1420] [--ieuk-delay:40ms]">
@@ -165,7 +169,7 @@ export default function Home() {
           </p>
         </div>
         <Link
-          to="/membership"
+          to="/about"
           className="ieuk-reveal inline-flex min-h-12 items-center gap-2 rounded-sm bg-[#5d1420] px-7 text-sm font-bold uppercase tracking-wide text-white shadow-sm transition-[background-color,transform] hover:bg-[#4a1019] active:scale-[0.99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5d1420] [--ieuk-delay:160ms]"
         >
           Explore Information
@@ -246,7 +250,7 @@ export default function Home() {
           id="serve-heading"
           className="mb-8 text-center text-2xl font-bold text-neutral-900 sm:text-3xl"
         >
-          How we serve the industry
+          How We Serve the Industry
         </h2>
         <div className="grid gap-5 md:grid-cols-2">
           {industryCards.map((card) => {
@@ -357,7 +361,7 @@ export default function Home() {
             id="trust-heading"
             className="mb-1 text-xl font-bold text-neutral-900"
           >
-            Building trust in a global market
+            Building Trust in a Global Market
           </h2>
           <div className="mb-6 h-px w-10 bg-[#5d1420]/35" aria-hidden />
           <div className="space-y-5 text-base leading-relaxed text-neutral-600">
