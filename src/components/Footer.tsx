@@ -65,9 +65,10 @@ export default function Footer() {
 
           <div className="mt-10 space-y-4 text-center">
             <p className="border-t border-white/20 pt-6 text-[11px] leading-relaxed text-white/65">
-              Registered in England &amp; Wales:{" "}
-              <span className="font-semibold text-white/80">05120951</span>   ©
-              International English UK (IEUK). All Rights Reserved.
+              © International English UK (IEUK). Registered in England &amp;
+              Wales:{" "}
+              <span className="font-semibold text-white/80">05120951</span>. All
+              Rights Reserved.
             </p>
           </div>
         </div>
