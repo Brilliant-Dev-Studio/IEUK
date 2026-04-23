@@ -1,20 +1,19 @@
-import PageShell from './PageShell'
-import { Link } from 'react-router-dom'
-import ParallaxImage from '../components/ParallaxImage'
-import { images } from '../data/images'
+import PageShell from "./PageShell";
+import { Check } from "lucide-react";
+import ParallaxImage from "../components/ParallaxImage";
+import PatternCard from "../components/PatternCard";
+import { images } from "../data/images";
 
 export default function Accreditation() {
-  const card =
-    'ieuk-reveal py-2 [--ieuk-delay:120ms]'
+  const card = "ieuk-reveal py-2 [--ieuk-delay:120ms]";
 
   return (
     <PageShell title="">
-      <section className={`${card} space-y-6 lg:grid lg:grid-cols-[1fr_1.15fr] lg:items-start lg:gap-10 lg:space-y-0`}>
+      <section
+        className={`${card} space-y-6 lg:grid lg:grid-cols-[1fr_1.15fr] lg:items-start lg:gap-10 lg:space-y-0`}
+      >
         <div className="space-y-5 lg:col-start-1 lg:row-start-1">
           <div className="space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5d1420]/80">
-              Accreditation
-            </p>
             <h2 className="text-xl font-semibold tracking-tight text-neutral-950 sm:text-2xl">
               Accreditation at IEUK: The Global Mark of Quality
             </h2>
@@ -35,7 +34,7 @@ export default function Accreditation() {
           </div>
         </div>
 
-        <figure className="ieuk-frame overflow-hidden shadow-[0_12px_40px_rgba(93,20,32,0.10)] lg:col-start-2 lg:row-span-2 lg:mt-1">
+        <figure className="ieuk-frame mx-auto w-full max-w-[560px] overflow-hidden shadow-[0_12px_40px_rgba(93,20,32,0.10)] lg:col-start-2 lg:row-span-2 lg:mt-1 lg:justify-self-center lg:max-w-none">
           <ParallaxImage
             src={images.accreditationHero}
             alt="IEUK accreditation review process and global quality standards"
@@ -70,8 +69,7 @@ export default function Accreditation() {
               <span className="font-semibold text-neutral-950">
                 Global Recognition:
               </span>{" "}
-              Elevate your brand by aligning with British pedagogical
-              standards.
+              Elevate your brand by aligning with British pedagogical standards.
             </li>
           </ul>
         </div>
@@ -80,10 +78,10 @@ export default function Accreditation() {
       <section className={`${card} mt-10 space-y-4 [--ieuk-delay:160ms]`}>
         <div className="space-y-2">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5d1420]/80">
-            Our Standards
+            Four Foundational Pillars
           </p>
           <h3 className="text-lg font-semibold tracking-tight text-neutral-950">
-            Four Foundational Pillars
+            Our Standards
           </h3>
           <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
         </div>
@@ -98,53 +96,43 @@ export default function Accreditation() {
           {(
             [
               {
-                title: 'Academic Integrity',
-                body: 'Curriculum design that is evidence-based, rigorous, and culturally responsive.',
+                title: "Academic Integrity",
+                body: "Curriculum design that is evidence-based, rigorous, and culturally responsive.",
+                pattern: "stripes",
               },
               {
-                title: 'Educational Quality',
-                body: 'Qualified faculty, modern teaching methodologies, and high student engagement.',
+                title: "Educational Quality",
+                body: "Qualified faculty, modern teaching methodologies, and high student engagement.",
+                pattern: "dots",
               },
               {
-                title: 'Institutional Stewardship',
-                body: 'Transparent management, ethical business practices, and sound financial health.',
+                title: "Institutional Stewardship",
+                body: "Transparent management, ethical business practices, and sound financial health.",
+                pattern: "grid",
               },
               {
-                title: 'Student Experience',
-                body: 'Robust student support, inclusive welfare policies, and a safe learning environment.',
+                title: "Student Experience",
+                body: "Robust student support, inclusive welfare policies, and a safe learning environment.",
+                pattern: "aurora",
               },
             ] as const
-          ).map(({ title, body }) => (
-            <div
+          ).map(({ title, body, pattern }) => (
+            <PatternCard
               key={title}
-              className="group relative overflow-hidden rounded-2xl bg-[#60101d] p-4 text-white shadow-[0_12px_36px_rgba(93,20,32,0.22)] ring-1 ring-white/10 transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_44px_rgba(93,20,32,0.28)]"
-            >
-              <div
-                className="pointer-events-none absolute inset-0 opacity-[0.20] [background-image:radial-gradient(rgba(255,255,255,0.14)_1px,transparent_1.2px)] [background-size:22px_22px]"
-                aria-hidden
-              />
-              <div
-                className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent"
-                aria-hidden
-              />
-
-              <div className="relative mb-3 h-px w-10 bg-white/25" aria-hidden />
-              <h4 className="relative text-base font-semibold tracking-tight text-white">
-                {title}
-              </h4>
-              <p className="relative mt-2 text-sm leading-relaxed text-white/80">
-                {body}
-              </p>
-            </div>
+              title={title}
+              body={body}
+              pattern={pattern}
+              icon={<Check className="h-4 w-4 text-white" aria-hidden />}
+            />
           ))}
         </div>
       </section>
 
-      <section className={`${card} mt-10 space-y-5 lg:grid lg:grid-cols-[1fr_1.25fr] lg:items-start lg:gap-10 lg:space-y-0 [--ieuk-delay:200ms]`}>
-        <div className="space-y-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5d1420]/80">
-            Accreditation Journey
-          </p>
+      <section
+        className={`${card} mt-10 space-y-5 lg:grid lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-10 lg:space-y-0 [--ieuk-delay:200ms]`}
+      >
+        <div className="space-y-3 lg:col-start-2 lg:row-start-1">
+        
           <h3 className="text-lg font-semibold tracking-tight text-neutral-950">
             IEUK Accreditation Journey
           </h3>
@@ -152,13 +140,13 @@ export default function Accreditation() {
           <p className="text-neutral-700">
             Achieving IEUK accreditation is a testament to an institution&apos;s
             commitment to quality. Our process is designed to be transparent,
-            thorough, and supportive and a collaborative peer-review
-            experience. We support institutions as they demonstrate their
-            commitment to excellence.
+            thorough, and supportive and a collaborative peer-review experience.
+            We support institutions as they demonstrate their commitment to
+            excellence.
           </p>
         </div>
 
-        <figure className="ieuk-frame overflow-hidden shadow-[0_12px_40px_rgba(93,20,32,0.10)] lg:col-start-2 lg:row-span-3 lg:mt-1">
+        <figure className="ieuk-frame overflow-hidden shadow-[0_12px_40px_rgba(93,20,32,0.10)] lg:col-start-1 lg:row-span-3 lg:mt-1 lg:justify-self-center">
           <ParallaxImage
             src={images.accreditationJourney}
             alt="Map of the IEUK accreditation process steps"
@@ -169,27 +157,27 @@ export default function Accreditation() {
           />
         </figure>
 
-        <ol className="space-y-4 text-neutral-700 lg:col-start-1 lg:row-start-2">
+        <ol className="space-y-4 text-neutral-700 lg:col-start-2 lg:row-start-2">
           {(
             [
               {
-                title: 'Inquiry & Application',
-                body: 'Institutions submit an initial profile to determine eligibility.',
+                title: "Inquiry & Application",
+                body: "Institutions submit an initial profile to determine eligibility.",
               },
               {
-                title: 'Self-Assessment Report',
-                body: 'A comprehensive internal study where the institution evaluates its own performance against IEUK standards.',
+                title: "Self-Assessment Report",
+                body: "A comprehensive internal study where the institution evaluates its own performance against IEUK standards.",
               },
               {
-                title: 'Peer Review (On-Site or Virtual Visit)',
-                body: 'A team of independent experts conducts an objective evaluation, including interviews with staff, faculty, and students.',
+                title: "Peer Review (On-Site or Virtual Visit)",
+                body: "A team of independent experts conducts an objective evaluation, including interviews with staff, faculty, and students.",
               },
               {
-                title: 'Quality Panel Review',
-                body: 'An independent panel reviews the findings and makes an impartial recommendation.',
+                title: "Quality Panel Review",
+                body: "An independent panel reviews the findings and makes an impartial recommendation.",
               },
               {
-                title: 'Status Awarded',
+                title: "Status Awarded",
                 body: 'Successful institutions are granted IEUK accreditation and the right to display our seal of logo "IEUK Accredited".',
               },
             ] as const
@@ -217,7 +205,7 @@ export default function Accreditation() {
           ))}
         </ol>
 
-        <div className="space-y-4 text-neutral-700 lg:col-start-1 lg:row-start-3">
+        <div className="space-y-4 text-neutral-700 lg:col-start-2 lg:row-start-3">
           <p className="text-sm leading-relaxed text-neutral-700">
             Our accreditation is evidence-based and reviews curriculum, faculty,
             student support, and operations—so the IEUK seal stays trusted.
@@ -225,11 +213,10 @@ export default function Accreditation() {
         </div>
       </section>
 
-      <section className={`${card} mt-10 space-y-5 lg:grid lg:grid-cols-[1fr_1.15fr] lg:items-start lg:gap-10 lg:space-y-0 [--ieuk-delay:240ms]`}>
+      <section
+        className={`${card} mt-10 space-y-5 lg:grid lg:grid-cols-[1fr_1.15fr] lg:items-start lg:gap-10 lg:space-y-0 [--ieuk-delay:240ms]`}
+      >
         <div className="space-y-3 lg:col-start-1 lg:row-start-1">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5d1420]/80">
-            Quality Assurance
-          </p>
           <h3 className="text-lg font-semibold tracking-tight text-neutral-950">
             Standards &amp; Quality Assurance: IEUK Benchmark
           </h3>
@@ -266,9 +253,6 @@ export default function Accreditation() {
 
       <section className={`${card} mt-10 space-y-5 [--ieuk-delay:280ms]`}>
         <div className="space-y-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5d1420]/80">
-            Quality Framework
-          </p>
           <h3 className="text-lg font-semibold tracking-tight text-neutral-950">
             IEUK Quality Framework
           </h3>
@@ -284,73 +268,73 @@ export default function Accreditation() {
             [
               {
                 n: 1,
-                title: 'Curriculum and Pedagogy',
+                title: "Curriculum and Pedagogy",
                 points: [
                   {
-                    k: 'Evidence-Based Learning',
-                    v: 'Curricula must be developed using research-backed methodologies that prioritize functional communication and linguistic accuracy.',
+                    k: "Evidence-Based Learning",
+                    v: "Curricula must be developed using research-backed methodologies that prioritize functional communication and linguistic accuracy.",
                   },
                   {
-                    k: 'Learner-Centric Design',
-                    v: 'Programs must be tailored to meet the specific proficiency goals of students, ranging from IELTS/academic preparation to Business English.',
+                    k: "Learner-Centric Design",
+                    v: "Programs must be tailored to meet the specific proficiency goals of students, ranging from IELTS/academic preparation to Business English.",
                   },
                   {
-                    k: 'Continuous Assessment',
-                    v: 'Regular monitoring of student progress to ensure learning outcomes are being met.',
+                    k: "Continuous Assessment",
+                    v: "Regular monitoring of student progress to ensure learning outcomes are being met.",
                   },
                 ],
               },
               {
                 n: 2,
-                title: 'Faculty Qualifications and Development',
+                title: "Faculty Qualifications and Development",
                 points: [
                   {
-                    k: 'Expert Instruction',
-                    v: 'Educators must hold recognized teaching qualifications (e.g., CELTA, DELTA, or equivalent).',
+                    k: "Expert Instruction",
+                    v: "Educators must hold recognized teaching qualifications (e.g., CELTA, DELTA, or equivalent).",
                   },
                   {
-                    k: 'Ongoing Growth',
-                    v: 'Institutions must provide structured Professional Development (PD) opportunities to ensure faculty stay updated on the latest trends in English language teaching (ELT).',
+                    k: "Ongoing Growth",
+                    v: "Institutions must provide structured Professional Development (PD) opportunities to ensure faculty stay updated on the latest trends in English language teaching (ELT).",
                   },
                   {
-                    k: 'Cultural Competency',
-                    v: 'Teachers must demonstrate an ability to engage a diverse, international student body.',
+                    k: "Cultural Competency",
+                    v: "Teachers must demonstrate an ability to engage a diverse, international student body.",
                   },
                 ],
               },
               {
                 n: 3,
-                title: 'Student Welfare and Support',
+                title: "Student Welfare and Support",
                 points: [
                   {
-                    k: 'Comprehensive Care',
-                    v: 'Institutions are required to provide robust induction programs, pastoral support, and clear pathways for student feedback.',
+                    k: "Comprehensive Care",
+                    v: "Institutions are required to provide robust induction programs, pastoral support, and clear pathways for student feedback.",
                   },
                   {
-                    k: 'Safe Learning Environment',
-                    v: 'All accredited centers must maintain physical and digital safety standards, including clear safeguarding policies.',
+                    k: "Safe Learning Environment",
+                    v: "All accredited centers must maintain physical and digital safety standards, including clear safeguarding policies.",
                   },
                   {
-                    k: 'Student Satisfaction',
-                    v: 'Regular feedback cycles are required to ensure the student voice is heard and acted upon.',
+                    k: "Student Satisfaction",
+                    v: "Regular feedback cycles are required to ensure the student voice is heard and acted upon.",
                   },
                 ],
               },
               {
                 n: 4,
-                title: 'Institutional Governance',
+                title: "Institutional Governance",
                 points: [
                   {
-                    k: 'Operational Transparency',
-                    v: 'Financial stability and clear management structures are essential for the long-term success of an educational provider.',
+                    k: "Operational Transparency",
+                    v: "Financial stability and clear management structures are essential for the long-term success of an educational provider.",
                   },
                   {
-                    k: 'Ethical Marketing',
-                    v: 'All promotional materials must be accurate, transparent, and representative of the actual student experience.',
+                    k: "Ethical Marketing",
+                    v: "All promotional materials must be accurate, transparent, and representative of the actual student experience.",
                   },
                   {
-                    k: 'Compliance',
-                    v: 'Adherence to all local and international laws, including data protection and equality legislation.',
+                    k: "Compliance",
+                    v: "Adherence to all local and international laws, including data protection and equality legislation.",
                   },
                 ],
               },
@@ -392,42 +376,41 @@ export default function Accreditation() {
       <section className={`${card} mt-10 space-y-4 [--ieuk-delay:320ms]`}>
         <div className="space-y-2">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5d1420]/80">
-            Quality Assurance Process
+            Quality Assurance
           </p>
           <h3 className="text-lg font-semibold tracking-tight text-neutral-950">
-            Our Quality Assurance Process
+            Consistency in Real Learning Environments
           </h3>
           <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
         </div>
 
-        <p className="text-neutral-700">
-          We utilize a multi-stage approach to ensure these standards are not
-          just written on paper, but practiced every day.
+        <p className="max-w-prose text-neutral-700">
+          Quality is not a one‑time check—it is an ongoing commitment. Our
+          multi‑stage approach ensures standards are not only documented, but
+          consistently delivered in real learning environments.
         </p>
 
-        <ul className="list-disc space-y-2 pl-5 text-neutral-700">
-          <li>
-            <span className="font-semibold text-neutral-950">
-              Internal Self-Assessment:
-            </span>{" "}
-            Institutions perform a rigorous internal audit of their operations
-            against our published Standards Manual.
-          </li>
-          <li>
-            <span className="font-semibold text-neutral-950">
-              Independent Peer Review:
-            </span>{" "}
-            Expert reviewers conduct site visits (or remote evaluations) to
-            assess the reality of classroom performance and student services.
-          </li>
-          <li>
-            <span className="font-semibold text-neutral-950">
-              Continuous Improvement Loop:
-            </span>{" "}
-            Accreditation is subject to annual reviews, ensuring that members
-            continue to evolve with the changing needs of the global education
-            market.
-          </li>
+        <ul className="grid gap-3 pt-2 sm:grid-cols-3">
+          {(
+            [
+              "Evidence-based reviews that focus on what learners experience.",
+              "Independent checks that validate delivery, not just paperwork.",
+              "Ongoing follow-ups that keep standards strong over time.",
+            ] as const
+          ).map((item) => (
+            <li
+              key={item}
+              className="flex items-start gap-3 rounded-2xl bg-white/70 p-4 shadow-[0_10px_30px_rgba(93,20,32,0.06)] ring-1 ring-[#5d1420]/10"
+            >
+              <span
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-2xl bg-[#5d1420] text-white shadow-sm"
+                aria-hidden
+              >
+                <Check className="h-5 w-5" strokeWidth={2.25} />
+              </span>
+              <p className="text-sm leading-relaxed text-neutral-700">{item}</p>
+            </li>
+          ))}
         </ul>
       </section>
 
@@ -442,9 +425,6 @@ export default function Accreditation() {
         />
 
         <div className="relative space-y-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/80">
-            Maintaining Excellence
-          </p>
           <h3 className="text-xl font-semibold tracking-tight text-white sm:text-2xl">
             Maintaining Excellence
           </h3>
@@ -471,14 +451,24 @@ export default function Accreditation() {
             </div>
           </div>
 
-          <Link
-            to="/contact"
-            className="inline-flex min-h-12 items-center justify-center rounded-sm bg-white px-7 text-sm font-bold uppercase tracking-wide text-[#60101d] shadow-sm transition-[background-color,transform] hover:bg-white/90 active:scale-[0.99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-          >
-            Contact Us
-          </Link>
+        </div>
+
+        <div className="relative mt-8 border-t border-white/15 pt-5 text-sm text-white/80">
+          <p>
+            © International English UK (IEUK) Committed to Quality, Empowering
+            Educators, Inspiring Learners.
+          </p>
+          <p className="mt-2">
+            Accreditation Inquiries:{" "}
+            <a
+              href="mailto:contact@ieuk.org"
+              className="font-semibold text-white underline decoration-white/40 underline-offset-4 hover:decoration-white/70"
+            >
+              contact@ieuk.org
+            </a>
+          </p>
         </div>
       </section>
     </PageShell>
-  )
+  );
 }

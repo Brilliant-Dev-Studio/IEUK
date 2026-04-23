@@ -1,5 +1,4 @@
 import PageShell from './PageShell'
-import { Link } from 'react-router-dom'
 import ParallaxImage from '../components/ParallaxImage'
 import { images } from '../data/images'
 
@@ -8,10 +7,10 @@ export default function AboutUs() {
     <PageShell title="">
       <div className="space-y-10">
         <section className="space-y-5">
-          <div className="grid gap-5 md:grid-cols-2 md:items-start md:gap-8">
+          <div className="grid gap-5 md:grid-cols-2 md:items-start md:gap-8 lg:grid-cols-1">
             <div className="space-y-3">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5d1420]/80">
-                About IEUK
+                About Us
               </p>
               <h2 className="text-xl font-semibold tracking-tight text-neutral-950 sm:text-2xl">
                 Who We Are?
@@ -30,11 +29,11 @@ export default function AboutUs() {
               </p>
             </div>
 
-            <figure className="ieuk-frame overflow-hidden shadow-[0_12px_28px_rgba(15,23,42,0.08)]">
+            <figure className="ieuk-frame overflow-hidden shadow-[0_12px_28px_rgba(15,23,42,0.08)] lg:-mx-[calc((100vw-100%)/2)] lg:w-screen">
               <ParallaxImage
                 src={images.aboutHero}
                 alt="IEUK community and international educators gathering"
-                className="h-[220px] w-full object-cover object-center sm:h-[280px]"
+                className="h-[320px] w-full object-cover object-center sm:h-[380px] lg:h-[520px]"
                 loading="lazy"
                 decoding="async"
                 strength={10}
@@ -67,9 +66,6 @@ export default function AboutUs() {
             </figure>
 
             <div className="order-1 space-y-3 lg:order-2">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5d1420]/80">
-                Looking Forward
-              </p>
               <h2 className="text-xl font-semibold tracking-tight text-neutral-950 sm:text-2xl">
                 Our Vision
               </h2>
@@ -88,9 +84,6 @@ export default function AboutUs() {
         <section className="space-y-5">
           <div className="grid gap-5 md:grid-cols-2 md:items-start md:gap-8">
             <div className="space-y-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5d1420]/80">
-                Our Commitments
-              </p>
               <h2 className="text-xl font-semibold tracking-tight text-neutral-950 sm:text-2xl">
                 Our Mission
               </h2>
@@ -139,7 +132,7 @@ export default function AboutUs() {
                 className="w-full h-auto"
                 loading="lazy"
                 decoding="async"
-                strength={9}
+                strength={0}
               />
             </figure>
           </div>
@@ -157,23 +150,18 @@ export default function AboutUs() {
                 Whether you are a dedicated teacher striving to inspire your
                 students, or an institution aiming to provide top-tier English
                 language instruction, you are part of a vibrant ecosystem.
-              </p>
-              <p>
                 By joining IEUK, you align yourself with a community that
                 prioritizes professional growth, academic excellence, and the
                 transformative power of language.
+              </p>
+              <p>
+                
               </p>
               <p className="text-sm text-neutral-600">
                 Join us in shaping the future of English language education.
               </p>
             </div>
 
-            <Link
-              to="/contact"
-              className="inline-flex min-h-12 items-center justify-center rounded-sm bg-[#5d1420] px-7 text-sm font-bold uppercase tracking-wide text-white shadow-sm transition-[background-color,transform] hover:bg-[#4a1019] active:scale-[0.99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5d1420]"
-            >
-              Contact Us Now
-            </Link>
           </div>
         </section>
       </div>

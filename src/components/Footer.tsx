@@ -67,7 +67,7 @@ export default function Footer() {
             <p className="border-t border-white/20 pt-6 text-[11px] leading-relaxed text-white/65">
               © International English UK (IEUK). Registered in England &amp;
               Wales:{" "}
-              <span className="font-semibold text-white/80">05120951</span>. All
+             05120951. All
               Rights Reserved.
             </p>
           </div>
