@@ -259,7 +259,7 @@ export default function IEUKRegistry() {
             >
               <p className="mb-3 font-semibold text-neutral-950">{title}</p>
               <div className="overflow-x-auto">
-                <table className="min-w-[560px] w-full border-collapse text-sm">
+                <table className="w-full border-collapse text-sm">
                   <thead>
                     <tr className="text-left">
                       <th className="w-14 border border-[#5d1420]/15 bg-white/60 px-3 py-2 font-semibold text-neutral-950">
@@ -268,7 +268,7 @@ export default function IEUKRegistry() {
                       <th className="border border-[#5d1420]/15 bg-white/60 px-3 py-2 font-semibold text-neutral-950">
                         Center
                       </th>
-                      <th className="border border-[#5d1420]/15 bg-white/60 px-3 py-2 font-semibold text-neutral-950">
+                      <th className="hidden border border-[#5d1420]/15 bg-white/60 px-3 py-2 font-semibold text-neutral-950 sm:table-cell">
                         Location
                       </th>
                     </tr>
@@ -283,10 +283,17 @@ export default function IEUKRegistry() {
                           <td className="border border-[#5d1420]/15 px-3 py-2 align-top text-neutral-600">
                             {idx + 1}
                           </td>
-                          <td className="border border-[#5d1420]/15 px-3 py-2 align-top font-medium text-neutral-950">
-                            {center}
-                          </td>
                           <td className="border border-[#5d1420]/15 px-3 py-2 align-top">
+                            <p className="font-medium text-neutral-950">
+                              {center}
+                            </p>
+                            {location ? (
+                              <p className="mt-0.5 text-xs text-neutral-600 sm:hidden">
+                                {location}
+                              </p>
+                            ) : null}
+                          </td>
+                          <td className="hidden border border-[#5d1420]/15 px-3 py-2 align-top sm:table-cell">
                             {location}
                           </td>
                         </tr>
