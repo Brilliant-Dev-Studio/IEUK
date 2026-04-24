@@ -1,10 +1,16 @@
 import PageShell from './PageShell'
 import ParallaxImage from '../components/ParallaxImage'
 import { images } from '../data/images'
+import Seo from '../components/Seo'
 
 export default function AboutUs() {
   return (
     <PageShell title="">
+      <Seo
+        title="About Us"
+        description="Learn who we are, our mission, and our vision for raising standards in English language education worldwide."
+        path="/about"
+      />
       <div className="space-y-10">
         <section className="space-y-5">
           <div className="grid gap-5 md:grid-cols-2 md:items-start md:gap-8 lg:grid-cols-1">
@@ -152,13 +158,10 @@ export default function AboutUs() {
                 language instruction, you are part of a vibrant ecosystem.
                 By joining IEUK, you align yourself with a community that
                 prioritizes professional growth, academic excellence, and the
-                transformative power of language.
+                transformative power of language. Join us in shaping the future of English language education.
               </p>
               <p>
                 
-              </p>
-              <p className="text-sm text-neutral-600">
-                Join us in shaping the future of English language education.
               </p>
             </div>
 

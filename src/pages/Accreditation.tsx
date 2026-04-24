@@ -3,14 +3,20 @@ import { Check } from "lucide-react";
 import ParallaxImage from "../components/ParallaxImage";
 import PatternCard from "../components/PatternCard";
 import { images } from "../data/images";
+import Seo from "../components/Seo";
 
 export default function Accreditation() {
   const card = "ieuk-reveal py-2 [--ieuk-delay:120ms]";
 
   return (
     <PageShell title="">
+      <Seo
+        title="Accreditation"
+        description="IEUK accreditation is a transparent, evidence-based process that evaluates curriculum, faculty expertise, student support, and operational standards."
+        path="/accreditation"
+      />
       <section
-        className={`${card} space-y-6 lg:grid lg:grid-cols-[1fr_1.15fr] lg:items-start lg:gap-10 lg:space-y-0`}
+        className={`${card} space-y-6 lg:grid lg:grid-cols-[1fr_1.15fr] lg:items-center lg:gap-10 lg:space-y-0`}
       >
         <div className="space-y-5 lg:col-start-1 lg:row-start-1">
           <div className="space-y-3">
@@ -34,7 +40,7 @@ export default function Accreditation() {
           </div>
         </div>
 
-        <figure className="ieuk-frame mx-auto w-full max-w-[560px] overflow-hidden shadow-[0_12px_40px_rgba(93,20,32,0.10)] lg:col-start-2 lg:row-span-2 lg:mt-1 lg:justify-self-center lg:max-w-none">
+        <figure className="ieuk-frame mx-auto w-full max-w-[560px] overflow-hidden shadow-[0_12px_40px_rgba(93,20,32,0.10)] lg:col-start-2 lg:row-span-2 lg:self-center lg:justify-self-center lg:max-w-none">
           <ParallaxImage
             src={images.accreditationHero}
             alt="IEUK accreditation review process and global quality standards"
@@ -207,8 +213,18 @@ export default function Accreditation() {
 
         <div className="space-y-4 text-neutral-700 lg:col-start-2 lg:row-start-3">
           <p className="text-sm leading-relaxed text-neutral-700">
-            Our accreditation is evidence-based and reviews curriculum, faculty,
-            student support, and operations—so the IEUK seal stays trusted.
+            Quality assurance is the foundation of IEUK. Through our transparent,
+            evidence-based accreditation process, we evaluate institutions on their
+            curriculum, faculty expertise, student support systems, and operational
+            standards.
+          </p>
+          <p className="text-sm leading-relaxed text-neutral-700">
+            When an institution earns accreditation from IEUK, they are not just
+            receiving a certificate; they are joining a select group of providers
+            committed to the highest level of academic rigor. We provide the
+            oversight necessary to maintain confidence in the English language
+            training sector, ensuring that every learner experiences the best of
+            British-inspired education.
           </p>
         </div>
       </section>
@@ -257,10 +273,6 @@ export default function Accreditation() {
             IEUK Quality Framework
           </h3>
           <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
-          <p className="text-neutral-700">
-            Our standards are built on four foundational pillars, inspired by
-            the excellence of British academic tradition.
-          </p>
         </div>
 
         <div className="grid gap-4 md:grid-cols-2">
@@ -349,9 +361,6 @@ export default function Accreditation() {
                   {n}
                 </span>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5d1420]/70">
-                    Pillar {n}
-                  </p>
                   <p className="font-semibold text-neutral-950">{title}</p>
                 </div>
               </header>
@@ -375,31 +384,35 @@ export default function Accreditation() {
 
       <section className={`${card} mt-10 space-y-4 [--ieuk-delay:320ms]`}>
         <div className="space-y-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5d1420]/80">
-            Quality Assurance
-          </p>
           <h3 className="text-lg font-semibold tracking-tight text-neutral-950">
-            Consistency in Real Learning Environments
+          Our Quality Assurance Process
           </h3>
           <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
         </div>
 
         <p className="max-w-prose text-neutral-700">
-          Quality is not a one‑time check—it is an ongoing commitment. Our
-          multi‑stage approach ensures standards are not only documented, but
-          consistently delivered in real learning environments.
+        We utilize a multi-stage approach to ensure these standards are not just written on paper, but practiced every day.
         </p>
 
         <ul className="grid gap-3 pt-2 sm:grid-cols-3">
           {(
             [
-              "Evidence-based reviews that focus on what learners experience.",
-              "Independent checks that validate delivery, not just paperwork.",
-              "Ongoing follow-ups that keep standards strong over time.",
+              {
+                k: "Internal Self-Assessment:",
+                v: "Institutions perform a rigorous internal audit of their operations against our published Standards Manual.",
+              },
+              {
+                k: "Independent Peer Review:",
+                v: "Expert reviewers conduct site visits (or remote evaluations) to assess the reality of classroom performance and student services.",
+              },
+              {
+                k: "Continuous Improvement Loop:",
+                v: "Accreditation is subject to annual reviews, ensuring that members continue to evolve with the changing needs of the global education market.",
+              },
             ] as const
-          ).map((item) => (
+          ).map(({ k, v }) => (
             <li
-              key={item}
+              key={k}
               className="flex items-start gap-3 rounded-2xl bg-white/70 p-4 shadow-[0_10px_30px_rgba(93,20,32,0.06)] ring-1 ring-[#5d1420]/10"
             >
               <span
@@ -408,7 +421,10 @@ export default function Accreditation() {
               >
                 <Check className="h-5 w-5" strokeWidth={2.25} />
               </span>
-              <p className="text-sm leading-relaxed text-neutral-700">{item}</p>
+              <p className="text-sm leading-relaxed text-neutral-700">
+                <span className="font-semibold text-neutral-950">{k}</span>{" "}
+                {v}
+              </p>
             </li>
           ))}
         </ul>
@@ -456,10 +472,7 @@ export default function Accreditation() {
         <div className="relative mt-8 border-t border-white/15 pt-5 text-sm text-white/80">
           <p>
             © International English UK (IEUK) Committed to Quality, Empowering
-            Educators, Inspiring Learners.
-          </p>
-          <p className="mt-2">
-            Accreditation Inquiries:{" "}
+            Educators, Inspiring Learners. Accreditation Inquiries:{" "}
             <a
               href="mailto:contact@ieuk.org"
               className="font-semibold text-white underline decoration-white/40 underline-offset-4 hover:decoration-white/70"
@@ -467,6 +480,7 @@ export default function Accreditation() {
               contact@ieuk.org
             </a>
           </p>
+       
         </div>
       </section>
     </PageShell>

@@ -1,6 +1,7 @@
 import PageShell from './PageShell'
 import ParallaxImage from '../components/ParallaxImage'
 import { images } from '../data/images'
+import Seo from '../components/Seo'
 
 export default function ContactUs() {
   const bleed =
@@ -11,6 +12,11 @@ export default function ContactUs() {
 
   return (
     <PageShell title="">
+      <Seo
+        title="Contact Us"
+        description="Get in touch with IEUK for accreditation, membership, and standards inquiries. We aim to respond promptly."
+        path="/contact"
+      />
       <section className="">
         <figure className={`${bleed} ${bleedLg} relative -mt-8 mb-7 overflow-hidden bg-white`}>
           <ParallaxImage
@@ -34,7 +40,7 @@ export default function ContactUs() {
             Get in Touch with International English UK (IEUK)
           </h2>
           <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
-          <p className="max-w-prose text-neutral-700">
+          <p className="w-full max-w-none text-neutral-700">
             ​We are here to support your institution&apos;s journey toward
             excellence. Whether you are seeking accreditation, looking to become
             a member, or have questions about our global standards, our team is
@@ -75,7 +81,7 @@ export default function ContactUs() {
             Direct Communication
           </h3>
           <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
-          <p className="max-w-prose text-neutral-700">
+          <p className="w-full max-w-none text-neutral-700">
             We pride ourselves on accessibility and transparency. For general
             inquiries regarding IEUK international standards, accreditation and
             membership, please feel free to contact us via phone during our
@@ -113,7 +119,7 @@ export default function ContactUs() {
             Business Hours
           </h3>
           <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
-          <p className="max-w-prose text-neutral-700">
+          <p className="w-full max-w-none text-neutral-700">
             We are open Monday through Friday, 09:00 – 17:00 (GMT/BST). We are
             closed on UK Public Holidays.
           </p>

@@ -8,6 +8,7 @@ import {
 } from 'lucide-react'
 import ParallaxImage from '../components/ParallaxImage'
 import { images } from '../data/images'
+import Seo from '../components/Seo'
 
 export default function Membership() {
   const bleed =
@@ -18,14 +19,14 @@ export default function Membership() {
 
   const benefits = [
     {
-      n: '01',
+      n: '1',
       title: 'Global Credibility & Brand Prestige',
       Icon: Globe,
       body: 'Membership is a testament to your commitment to quality. As an IEUK member, you gain the right to feature our branding across your marketing materials, signaling to students, parents, and partners worldwide that your institution upholds the highest standards of English language education.',
       bullets: [],
     },
     {
-      n: '02',
+      n: '2',
       title: 'Networking & Collaboration',
       Icon: Handshake,
       body: 'Join a vibrant, international community of educators, language school owners, and industry leaders.',
@@ -35,7 +36,7 @@ export default function Membership() {
       ],
     },
     {
-      n: '03',
+      n: '3',
       title: 'Professional Development',
       Icon: BookOpenCheck,
       body: 'We are committed to the growth of our members. Our platform provides:',
@@ -46,7 +47,7 @@ export default function Membership() {
       ],
     },
     {
-      n: '04',
+      n: '4',
       title: 'Industry Advocacy & Insights',
       Icon: BadgeCheck,
       body: 'Stay ahead of the curve. IEUK monitors global education trends, legislative changes, and market shifts to keep our members informed.',
@@ -56,7 +57,7 @@ export default function Membership() {
       ],
     },
     {
-      n: '05',
+      n: '5',
       title: 'Operational Support & Resources',
       Icon: LayoutPanelLeft,
       body: 'Running an educational institution is complex. IEUK members benefit from:',
@@ -70,13 +71,18 @@ export default function Membership() {
 
   return (
     <PageShell title="">
+      <Seo
+        title="Membership"
+        description="Join IEUK’s professional membership network to gain global credibility, collaboration opportunities, and resources designed to help your institution thrive."
+        path="/membership"
+      />
       <section className="">
         <section className="ieuk-reveal space-y-4 py-2 [--ieuk-delay:120ms]">
           <h2 className="text-xl font-semibold tracking-tight text-neutral-950 sm:text-2xl">
             Elevate Your Institution: The Benefits of IEUK Membership
           </h2>
           <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
-          <p className="max-w-prose text-neutral-700">
+          <p className="w-full max-w-none text-neutral-700">
             At International English UK (IEUK), we believe that education is
             stronger when we work together. By joining our professional
             membership network, you align your organisation with a global
@@ -144,13 +150,32 @@ export default function Membership() {
                 </p>
 
                 {bullets.length > 0 && (
-                  <ul className="mt-4 space-y-2 text-sm leading-relaxed text-neutral-700">
-                    {bullets.map((item) => (
-                      <li key={item} className="flex gap-2">
-                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#5d1420]/60" aria-hidden />
-                        <span>{item}</span>
-                      </li>
-                    ))}
+                  <ul className="mt-4 space-y-2 text-sm leading-relaxed text-neutral-950">
+                    {bullets.map((item) => {
+                      const colonIndex = item.indexOf(':')
+                      const hasPrefix = colonIndex !== -1
+                      const prefix = hasPrefix ? item.slice(0, colonIndex + 1) : ''
+                      const rest = hasPrefix ? item.slice(colonIndex + 1).trimStart() : item
+
+                      return (
+                        <li key={item} className="flex gap-2">
+                          <span
+                            className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-950/70"
+                            aria-hidden
+                          />
+                          <span>
+                            {hasPrefix ? (
+                              <>
+                                <span className="font-semibold">{prefix}</span>{' '}
+                                {rest}
+                              </>
+                            ) : (
+                              item
+                            )}
+                          </span>
+                        </li>
+                      )
+                    })}
                   </ul>
                 )}
               </section>
@@ -237,7 +262,7 @@ export default function Membership() {
             />
           </figure>
 
-          <p className="text-base leading-relaxed text-neutral-700">
+          <p className="text-center text-base italic leading-relaxed text-neutral-700">
             &quot;Our strength lies in our community. Join IEUK and connect with
             the world’s most dedicated English language professionals.&quot;
           </p>
@@ -260,6 +285,20 @@ export default function Membership() {
                 Ready to invest in your institution’s future and be part of a
                 global movement for excellence in English language education!
               </p>
+            </div>
+
+            <div className="relative mt-8 border-t border-white/15 pt-5 text-sm text-white/80">
+              <p>
+                © International English UK (IEUK) Committed to Quality, Empowering
+                Educators, Inspiring Learners. Membership Inquiries:{' '}
+                <a
+                  href="mailto:contact@ieuk.org"
+                  className="font-semibold text-white underline decoration-white/40 underline-offset-4 hover:decoration-white/70"
+                >
+                  contact@ieuk.org
+                </a>
+              </p>
+              
             </div>
           </section>
         </section>

@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import PageShell from './PageShell'
 import ParallaxImage from '../components/ParallaxImage'
 import { images } from '../data/images'
+import Seo from '../components/Seo'
 
 export default function OurTeam() {
   const sections = useMemo(
@@ -34,6 +35,11 @@ export default function OurTeam() {
 
   return (
     <PageShell title="">
+      <Seo
+        title="Our Team"
+        description="Meet our representatives across executive leadership, linguistic expertise, and creative disciplines."
+        path="/team"
+      />
       <section className="ieuk-reveal space-y-4 py-2 [--ieuk-delay:120ms]">
         <div className="space-y-2">
           <h2 className="text-xl font-semibold tracking-tight text-neutral-950 sm:text-2xl">
@@ -41,7 +47,7 @@ export default function OurTeam() {
           </h2>
           <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
         </div>
-        <p className="max-w-prose text-neutral-700">
+        <p className="w-full max-w-none text-neutral-700">
           Meet our representatives across executive leadership, linguistic
           expertise, and creative disciplines.
         </p>

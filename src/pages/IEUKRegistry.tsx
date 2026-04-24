@@ -1,11 +1,12 @@
 import PageShell from './PageShell'
 import ParallaxImage from '../components/ParallaxImage'
 import { images } from '../data/images'
+import Seo from '../components/Seo'
 
 export default function IEUKRegistry() {
   const accreditedRegions = [
     {
-      title: 'Europe & UK (40 Centers)',
+      title: 'Europe & UK (40 Centres)',
       items: [
         'London Academy of English (London, UK)',
         'Oxford Bridge International (Oxford, UK)',
@@ -50,7 +51,7 @@ export default function IEUKRegistry() {
       ],
     },
     {
-      title: 'Middle East & Africa (30 Centers)',
+      title: 'Middle East & Africa (30 Centres)',
       items: [
         'Dubai Global Education (Dubai, UAE)',
         'Riyadh Elite English (Riyadh, KSA)',
@@ -85,7 +86,7 @@ export default function IEUKRegistry() {
       ],
     },
     {
-      title: 'Asia & Oceania (29 Centers)',
+      title: 'Asia & Oceania (29 Centres)',
       items: [
         'Singapore Excellence Centre (Singapore)',
         'Tokyo British Academy (Tokyo, Japan)',
@@ -175,6 +176,11 @@ export default function IEUKRegistry() {
 
   return (
     <PageShell title="">
+      <Seo
+        title="IEUK Registry"
+        description="Browse the registry of IEUK accredited institutions, associate members, and corporate members, alongside security and anti-fraud protections."
+        path="/registry"
+      />
       <section className="ieuk-reveal space-y-6 py-2 [--ieuk-delay:120ms] lg:grid lg:grid-cols-[1fr_1.15fr] lg:items-center lg:gap-10 lg:space-y-0">
         <div className="space-y-4">
           <h2 className="text-xl font-semibold tracking-tight text-neutral-950 sm:text-2xl">
@@ -210,7 +216,7 @@ export default function IEUKRegistry() {
           <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
         </div>
 
-        <p className="max-w-prose text-neutral-700">
+        <p className="w-full max-w-none text-neutral-700">
           ​These institutions listed here below have successfully completed IEUK
           full inspection and accreditation process. They meet the highest
           standards for curriculum, faculty qualifications, student welfare, and
@@ -222,7 +228,7 @@ export default function IEUKRegistry() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5d1420]/70">
               Status
             </p>
-            <p className="mt-2 text-base font-semibold text-neutral-950">
+            <p className="mt-2 text-sm leading-relaxed text-neutral-700">
               ​Fully Validated
             </p>
           </section>
@@ -240,17 +246,6 @@ export default function IEUKRegistry() {
       </section>
 
       <section className="ieuk-reveal mt-10 space-y-5 [--ieuk-delay:200ms]">
-        <div className="space-y-2">
-          <h3 className="text-lg font-semibold tracking-tight text-neutral-950">
-            Europe, Middle East, Africa, Asia & Oceania
-          </h3>
-          <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
-          <p className="max-w-prose text-neutral-700">
-            Browse the accredited institutions by region. Each list is numbered
-            for easy reference.
-          </p>
-        </div>
-
         <div className="grid gap-4 lg:grid-cols-2">
           {accreditedRegions.map(({ title, items }) => (
             <section
@@ -258,17 +253,38 @@ export default function IEUKRegistry() {
               className="bg-white/70 p-4 shadow-[0_10px_30px_rgba(93,20,32,0.06)] ring-1 ring-[#5d1420]/10"
             >
               <p className="mb-3 font-semibold text-neutral-950">{title}</p>
-              <div className="overflow-x-auto">
-                <table className="w-full border-collapse text-sm">
+              {/* Mobile: list (more reliable than tables on small screens) */}
+              <ol className="space-y-2 text-sm text-neutral-700 sm:hidden">
+                {items.map((raw, idx) => {
+                  const match = raw.match(/^(.*)\s\((.*)\)$/)
+                  const centre = match?.[1] ?? raw
+                  const location = match?.[2] ?? ''
+                  return (
+                    <li key={raw} className="rounded-xl bg-white/60 p-3 ring-1 ring-[#5d1420]/10">
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-600">
+                        No. {idx + 1}
+                      </p>
+                      <p className="mt-1 font-medium text-neutral-950">{centre}</p>
+                      {location ? (
+                        <p className="mt-0.5 text-xs text-neutral-600">{location}</p>
+                      ) : null}
+                    </li>
+                  )
+                })}
+              </ol>
+
+              {/* Tablet/Desktop: table */}
+              <div className="hidden overflow-x-auto sm:block">
+                <table className="w-full min-w-[560px] border-collapse text-sm">
                   <thead>
                     <tr className="text-left">
                       <th className="w-14 border border-[#5d1420]/15 bg-white/60 px-3 py-2 font-semibold text-neutral-950">
-                        #
+                        No.
                       </th>
                       <th className="border border-[#5d1420]/15 bg-white/60 px-3 py-2 font-semibold text-neutral-950">
-                        Center
+                        Centre
                       </th>
-                      <th className="hidden border border-[#5d1420]/15 bg-white/60 px-3 py-2 font-semibold text-neutral-950 sm:table-cell">
+                      <th className="border border-[#5d1420]/15 bg-white/60 px-3 py-2 font-semibold text-neutral-950">
                         Location
                       </th>
                     </tr>
@@ -276,7 +292,7 @@ export default function IEUKRegistry() {
                   <tbody className="text-neutral-700">
                     {items.map((raw, idx) => {
                       const match = raw.match(/^(.*)\s\((.*)\)$/)
-                      const center = match?.[1] ?? raw
+                      const centre = match?.[1] ?? raw
                       const location = match?.[2] ?? ''
                       return (
                         <tr key={raw}>
@@ -284,16 +300,9 @@ export default function IEUKRegistry() {
                             {idx + 1}
                           </td>
                           <td className="border border-[#5d1420]/15 px-3 py-2 align-top">
-                            <p className="font-medium text-neutral-950">
-                              {center}
-                            </p>
-                            {location ? (
-                              <p className="mt-0.5 text-xs text-neutral-600 sm:hidden">
-                                {location}
-                              </p>
-                            ) : null}
+                            <p className="font-medium text-neutral-950">{centre}</p>
                           </td>
-                          <td className="hidden border border-[#5d1420]/15 px-3 py-2 align-top sm:table-cell">
+                          <td className="border border-[#5d1420]/15 px-3 py-2 align-top">
                             {location}
                           </td>
                         </tr>
@@ -315,7 +324,7 @@ export default function IEUKRegistry() {
           <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
         </div>
 
-        <p className="max-w-prose text-neutral-700">
+        <p className="w-full max-w-none text-neutral-700">
           ​These educational organizations and service providers listed here
           below that support IEUK mission globally and are in &quot;Good
           Standing&quot;, but they do not provide direct English language tuition
@@ -327,7 +336,7 @@ export default function IEUKRegistry() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5d1420]/70">
               Status
             </p>
-            <p className="mt-2 text-base font-semibold text-neutral-950">
+            <p className="mt-2 text-sm leading-relaxed text-neutral-700">
               ​Member in &quot;Good Standing&quot;
             </p>
           </section>
@@ -362,7 +371,7 @@ export default function IEUKRegistry() {
           <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
         </div>
 
-        <p className="max-w-prose text-neutral-700">
+        <p className="w-full max-w-none text-neutral-700">
           ​IEUK Registry is designed to protect institutional reputations and
           prevent the circulation of fraudulent credentials for educational
           verification.
@@ -375,7 +384,7 @@ export default function IEUKRegistry() {
             </p>
             <p className="mt-2 text-sm leading-relaxed text-neutral-700">
               ​IEUK Registry is hosted on a secure, encrypted cloud
-              infrastructure with <span className="font-semibold">AES-256</span>{' '}
+              infrastructure with AES-256
               standard data protection.
             </p>
           </section>
@@ -385,7 +394,7 @@ export default function IEUKRegistry() {
               Real-Time Sync
             </p>
             <p className="mt-2 text-sm leading-relaxed text-neutral-700">
-              Real-Time Sync: IEUK Registry is up to date instantly as soon as
+              IEUK Registry is up to date instantly as soon as
               IEUK Authorities finalize a status change, ensuring no &quot;lag&quot;
               between a revocation and its public visibility.
             </p>
@@ -393,8 +402,8 @@ export default function IEUKRegistry() {
         </div>
 
         <section className="rounded-2xl border border-[#5d1420]/15 bg-[#5d1420]/[0.035] p-5 text-sm text-neutral-800">
-          <p className="font-semibold text-neutral-950">
-            ⚠ Notice to Stakeholders:
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5d1420]/70">
+            ⚠ Notice to Stakeholders
           </p>
           <p className="mt-2 leading-relaxed text-neutral-700">
             ​If an institution claims IEUK accreditation or membership, but does

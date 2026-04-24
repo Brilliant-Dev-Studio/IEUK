@@ -4,6 +4,7 @@ import { ArrowUpRight, BadgeCheck } from "lucide-react";
 import ParallaxLayer from "../components/ParallaxLayer";
 import ParallaxImage from "../components/ParallaxImage";
 import { images } from "../data/images";
+import Seo from "../components/Seo";
 
 type IndustryCardPattern = "stripes" | "dots" | "grid" | "aurora";
 
@@ -110,6 +111,10 @@ export default function Home() {
 
   return (
     <div ref={rootRef} className="w-full text-pretty">
+      <Seo
+        title="IEUK"
+        description="International English UK (IEUK) — accreditation, membership, and a global network of English language education providers."
+      />
       {/* Hero — blush background from layout */}
       <section className="">
         <figure
