@@ -94,7 +94,7 @@ export default function Home() {
         },
         {
           root: null,
-          threshold: 0.18,
+          threshold: 0,
           rootMargin: "0px 0px -10% 0px",
         }
       );
