@@ -17,10 +17,11 @@ function siteUrl() {
   return (fromEnv?.trim?.() || 'https://ieuk.org').replace(/\/+$/, '')
 }
 
-const SITE_NAME = ' | INTERNATIONAL ENGLISH UK'
+/** Matches index.html / brand line — used for site_name and the home page title. */
+const SITE_BRAND_LINE = 'IEUK | INTERNATIONAL ENGLISH UK'
 
 export default function Seo({
-  title: _title,
+  title: pageName,
   description,
   path,
   imagePath = '/social-preview.png',
@@ -32,7 +33,9 @@ export default function Seo({
   const canonical = `${base}${pathname === '/' ? '/' : pathname.replace(/\/+$/, '')}`
   const image = imagePath.startsWith('http') ? imagePath : `${base}${imagePath}`
 
-  const pageTitle = SITE_NAME
+  const trimmedName = pageName.trim()
+  const pageTitle =
+    trimmedName === 'IEUK' ? SITE_BRAND_LINE : `${trimmedName} | IEUK`
   const cleanDescription = description.trim()
 
   return (
@@ -41,13 +44,13 @@ export default function Seo({
       <meta name="description" content={cleanDescription} />
       <link rel="canonical" href={canonical} />
 
-      <meta property="og:site_name" content={SITE_NAME} />
+      <meta property="og:site_name" content={SITE_BRAND_LINE} />
       <meta property="og:title" content={pageTitle} />
       <meta property="og:description" content={cleanDescription} />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={canonical} />
       <meta property="og:image" content={image} />
-      <meta property="og:image:alt" content={SITE_NAME} />
+      <meta property="og:image:alt" content={SITE_BRAND_LINE} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={pageTitle} />
