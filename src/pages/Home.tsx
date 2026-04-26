@@ -136,12 +136,12 @@ export default function Home() {
           />
         </figure>
 
-        <p className="ieuk-reveal mb-3 inline-block border-b-2 border-[#5d1420] pb-1 text-[11px] font-bold uppercase tracking-[0.18em] text-[#5d1420] [--ieuk-delay:40ms]">
+        <p className="ieuk-reveal mb-3 inline-block border-b-2 border-[#5a0c16] pb-1 text-[11px] font-bold uppercase tracking-[0.18em] text-[#5a0c16] [--ieuk-delay:40ms]">
           International English UK
         </p>
         <h1 className="ieuk-reveal mb-4 text-balance text-[1.65rem] font-bold leading-[1.15] tracking-tight text-neutral-900 sm:text-4xl sm:leading-[1.12] [--ieuk-delay:120ms]">
           Empowering Global Communication through Excellence in{" "}
-          <span className="text-[#5d1420]">English</span>
+          <span className="text-[#5a0c16]">English</span>
         </h1>
         <div className="ieuk-reveal mb-6 space-y-4 text-[15px] leading-relaxed text-neutral-700 sm:text-base md:text-[17px] md:leading-relaxed [--ieuk-delay:200ms]">
           <p>
@@ -175,7 +175,7 @@ export default function Home() {
         </div>
         <Link
           to="/about"
-          className="ieuk-reveal inline-flex min-h-12 items-center gap-2 rounded-sm bg-[#5d1420] px-7 text-sm font-bold uppercase tracking-wide text-white shadow-sm transition-[background-color,transform] hover:bg-[#4a1019] active:scale-[0.99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5d1420] [--ieuk-delay:160ms]"
+          className="ieuk-reveal inline-flex min-h-12 items-center gap-2 rounded-sm bg-[#5a0c16] px-7 text-sm font-bold uppercase tracking-wide text-white shadow-sm transition-[background-color,transform] hover:bg-[#3d0a0f] active:scale-[0.99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5a0c16] [--ieuk-delay:160ms]"
         >
           Explore Information
           <ArrowUpRight className="h-4 w-4 shrink-0" aria-hidden />
@@ -197,7 +197,7 @@ export default function Home() {
 
           {/* Why IEUK — maroon band */}
           <section
-            className="rounded-2xl bg-[#60101d] px-5 py-10 text-white sm:py-12 md:px-10 lg:px-[50px]"
+            className="rounded-2xl bg-[#4a0a11] px-5 py-10 text-white sm:py-12 md:px-10 lg:px-[50px]"
             aria-labelledby="why-heading"
           >
             <div className="mt-6">
@@ -247,7 +247,7 @@ export default function Home() {
 
       {/* Departments-style overlay cards */}
       <section
-        className={`ieuk-reveal ${bleed} mb-10 rounded-2xl border border-[#5d1420]/10 bg-white px-4 py-10 shadow-[0_12px_40px_rgba(93,20,32,0.06)] sm:px-6 [--ieuk-delay:120ms]`}
+        className={`ieuk-reveal ${bleed} mb-10 rounded-2xl border border-[#5a0c16]/10 bg-white px-4 py-10 shadow-[0_12px_40px_rgba(90,12,22,0.06)] sm:px-6 [--ieuk-delay:120ms]`}
         aria-labelledby="serve-heading"
       >
         {" "}
@@ -262,9 +262,9 @@ export default function Home() {
             const { n, title, body, pattern, cta } = card;
             const to = "to" in card ? card.to : undefined;
             const cardClass = [
-              "group relative block min-h-[220px] overflow-hidden rounded-2xl shadow-[0_8px_30px_rgba(93,20,32,0.15)] ring-1 ring-white/10 transition-[box-shadow,transform] duration-300",
+              "group relative block min-h-[220px] overflow-hidden rounded-2xl shadow-[0_8px_30px_rgba(90,12,22,0.15)] ring-1 ring-white/10 transition-[box-shadow,transform] duration-300",
               cta
-                ? "hover:shadow-[0_12px_36px_rgba(93,20,32,0.22)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5d1420]"
+                ? "hover:shadow-[0_12px_36px_rgba(90,12,22,0.22)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5a0c16]"
                 : "cursor-default",
               industryCardSkin[pattern],
             ].join(" ");
@@ -326,7 +326,7 @@ export default function Home() {
                     />
                   </span>
                   {cta && (
-                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#60101d] shadow-md transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#4a0a11] shadow-md transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                       <ArrowUpRight className="h-5 w-5" aria-hidden />
                     </span>
                   )}
@@ -359,7 +359,7 @@ export default function Home() {
       <div className="ieuk-reveal mb-10 mt-12 grid gap-8 md:mt-14 lg:grid-cols-2 lg:items-stretch [--ieuk-delay:160ms]">
         {/* Trust — original text layout */}
         <section
-          className="max-w-prose lg:max-w-none lg:rounded-2xl lg:border lg:border-[#5d1420]/10 lg:bg-white/65 lg:p-8 lg:shadow-[0_10px_30px_rgba(93,20,32,0.05)]"
+          className="max-w-prose lg:max-w-none lg:rounded-2xl lg:border lg:border-[#5a0c16]/10 lg:bg-white/65 lg:p-8 lg:shadow-[0_10px_30px_rgba(90,12,22,0.05)]"
           aria-labelledby="trust-heading"
         >
           <h2
@@ -368,14 +368,14 @@ export default function Home() {
           >
             Building Trust in a Global Market
           </h2>
-          <div className="mb-6 h-px w-10 bg-[#5d1420]/35" aria-hidden />
+          <div className="mb-6 h-px w-10 bg-[#5a0c16]/35" aria-hidden />
           <div className="space-y-5 text-base leading-relaxed text-neutral-600">
             <p>
               In a crowded global English language education sector, IEUK
               functions as a primary reference for excellence, integrity,
               quality, and innovation.
             </p>
-            <div className="space-y-4 border-l-2 border-[#5d1420]/20 pl-4">
+            <div className="space-y-4 border-l-2 border-[#5a0c16]/20 pl-4">
               <p>
                 <span className="font-semibold text-neutral-900">
                   For Institutions:
@@ -403,11 +403,11 @@ export default function Home() {
 
         {/* CTA */}
         <section
-          className="ieuk-reveal relative overflow-hidden rounded-2xl border border-[#5d1420]/12 bg-gradient-to-b from-[var(--ieuk-blush)]/50 via-white to-white px-5 py-10 text-center shadow-[0_10px_36px_rgba(93,20,32,0.07)] sm:px-12 sm:py-11 md:px-14 md:py-12 lg:mb-0 lg:mt-0 lg:px-12 lg:text-left [--ieuk-delay:240ms]"
+          className="ieuk-reveal relative overflow-hidden rounded-2xl border border-[#5a0c16]/12 bg-gradient-to-b from-[var(--ieuk-blush)]/50 via-white to-white px-5 py-10 text-center shadow-[0_10px_36px_rgba(90,12,22,0.07)] sm:px-12 sm:py-11 md:px-14 md:py-12 lg:mb-0 lg:mt-0 lg:px-12 lg:text-left [--ieuk-delay:240ms]"
           aria-labelledby="cta-heading"
         >
           <div
-            className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#5d1420]/20 to-transparent"
+            className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#5a0c16]/20 to-transparent"
             aria-hidden
           />
           <div className="relative mx-auto max-w-lg md:max-w-xl lg:mx-0 lg:max-w-none">
@@ -418,7 +418,7 @@ export default function Home() {
               Elevate Your Professional Journey Today
             </h2>
             <div
-              className="mx-auto mb-5 h-px w-12 bg-[#5d1420]/30 lg:mx-0"
+              className="mx-auto mb-5 h-px w-12 bg-[#5a0c16]/30 lg:mx-0"
               aria-hidden
             />
             <p className="mb-8 text-base leading-relaxed text-neutral-600">
@@ -429,7 +429,7 @@ export default function Home() {
             <div className="flex flex-col gap-3 sm:flex-row sm:justify-center sm:gap-4 lg:justify-start">
               <Link
                 to="/contact"
-                className="inline-flex min-h-12 items-center justify-center rounded-sm border-2 border-[#5d1420]/28 bg-[linear-gradient(rgba(255,255,255,0.85),rgba(255,255,255,0.85)),repeating-linear-gradient(135deg,rgba(93,20,32,0.12)_0,rgba(93,20,32,0.12)_1px,transparent_1px,transparent_10px)] px-7 text-sm font-bold text-[#5d1420] backdrop-blur-[2px] transition-colors hover:border-[#5d1420]/45 hover:bg-[linear-gradient(rgba(255,255,255,0.95),rgba(255,255,255,0.95)),repeating-linear-gradient(135deg,rgba(93,20,32,0.14)_0,rgba(93,20,32,0.14)_1px,transparent_1px,transparent_10px)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5d1420]"
+                className="inline-flex min-h-12 items-center justify-center rounded-sm border-2 border-[#5a0c16]/28 bg-[linear-gradient(rgba(255,255,255,0.85),rgba(255,255,255,0.85)),repeating-linear-gradient(135deg,rgba(90,12,22,0.12)_0,rgba(90,12,22,0.12)_1px,transparent_1px,transparent_10px)] px-7 text-sm font-bold text-[#5a0c16] backdrop-blur-[2px] transition-colors hover:border-[#5a0c16]/45 hover:bg-[linear-gradient(rgba(255,255,255,0.95),rgba(255,255,255,0.95)),repeating-linear-gradient(135deg,rgba(90,12,22,0.14)_0,rgba(90,12,22,0.14)_1px,transparent_1px,transparent_10px)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5a0c16]"
               >
                 Contact Us
               </Link>

@@ -23,7 +23,7 @@ export default function Accreditation() {
             <h2 className="text-xl font-semibold tracking-tight text-neutral-950 sm:text-2xl">
               Accreditation at IEUK: The Global Mark of Quality
             </h2>
-            <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
+            <div className="h-px w-12 bg-[#5a0c16]/25" aria-hidden />
           </div>
 
           <div className="space-y-4 text-neutral-700">
@@ -40,7 +40,7 @@ export default function Accreditation() {
           </div>
         </div>
 
-        <figure className="ieuk-frame mx-auto w-full max-w-[560px] overflow-hidden shadow-[0_12px_40px_rgba(93,20,32,0.10)] lg:col-start-2 lg:row-span-2 lg:self-center lg:justify-self-center lg:max-w-none">
+        <figure className="ieuk-frame mx-auto w-full max-w-[560px] overflow-hidden shadow-[0_12px_40px_rgba(90,12,22,0.10)] lg:col-start-2 lg:row-span-2 lg:self-center lg:justify-self-center lg:max-w-none">
           <ParallaxImage
             src={images.accreditationHero}
             alt="IEUK accreditation review process and global quality standards"
@@ -83,13 +83,10 @@ export default function Accreditation() {
 
       <section className={`${card} mt-10 space-y-4 [--ieuk-delay:160ms]`}>
         <div className="space-y-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5d1420]/80">
-            Four Foundational Pillars
-          </p>
           <h3 className="text-lg font-semibold tracking-tight text-neutral-950">
             Our Standards
           </h3>
-          <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
+          <div className="h-px w-12 bg-[#5a0c16]/25" aria-hidden />
         </div>
 
         <p className="text-neutral-700">
@@ -142,7 +139,7 @@ export default function Accreditation() {
           <h3 className="text-lg font-semibold tracking-tight text-neutral-950">
             IEUK Accreditation Journey
           </h3>
-          <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
+          <div className="h-px w-12 bg-[#5a0c16]/25" aria-hidden />
           <p className="text-neutral-700">
             Achieving IEUK accreditation is a testament to an institution&apos;s
             commitment to quality. Our process is designed to be transparent,
@@ -152,7 +149,7 @@ export default function Accreditation() {
           </p>
         </div>
 
-        <figure className="ieuk-frame overflow-hidden shadow-[0_12px_40px_rgba(93,20,32,0.10)] lg:col-start-1 lg:row-span-3 lg:mt-1 lg:justify-self-center">
+        <figure className="ieuk-frame overflow-hidden shadow-[0_12px_40px_rgba(90,12,22,0.10)] lg:col-start-1 lg:row-span-3 lg:mt-1 lg:justify-self-center">
           <ParallaxImage
             src={images.accreditationJourney}
             alt="Map of the IEUK accreditation process steps"
@@ -191,12 +188,12 @@ export default function Accreditation() {
             <li key={title} className="relative pl-12">
               {idx !== arr.length - 1 && (
                 <span
-                  className="absolute left-[18px] top-9 h-[calc(100%-18px)] w-px bg-[#5d1420]/18"
+                  className="absolute left-[18px] top-9 h-[calc(100%-18px)] w-px bg-[#5a0c16]/18"
                   aria-hidden
                 />
               )}
               <span
-                className="absolute left-0 top-0 flex h-9 w-9 items-center justify-center rounded-full bg-[#5d1420] text-sm font-bold text-white shadow-sm"
+                className="absolute left-0 top-0 flex h-9 w-9 items-center justify-center rounded-full bg-[#5a0c16] text-sm font-bold text-white shadow-sm"
                 aria-hidden
               >
                 {idx + 1}
@@ -236,7 +233,7 @@ export default function Accreditation() {
           <h3 className="text-lg font-semibold tracking-tight text-neutral-950">
             Standards &amp; Quality Assurance: IEUK Benchmark
           </h3>
-          <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
+          <div className="h-px w-12 bg-[#5a0c16]/25" aria-hidden />
           <p className="text-neutral-700">
             At International English UK (IEUK), we believe that high-quality
             English education is not an accident and it is the result of
@@ -247,7 +244,7 @@ export default function Accreditation() {
           </p>
         </div>
 
-        <figure className="ieuk-frame overflow-hidden shadow-[0_12px_40px_rgba(93,20,32,0.10)] lg:col-start-2 lg:row-span-2 lg:mt-1">
+        <figure className="ieuk-frame overflow-hidden shadow-[0_12px_40px_rgba(90,12,22,0.10)] lg:col-start-2 lg:row-span-2 lg:mt-1">
           <ParallaxImage
             src={images.accreditationBenchmark}
             alt="IEUK standards and quality assurance leadership"
@@ -272,7 +269,7 @@ export default function Accreditation() {
           <h3 className="text-lg font-semibold tracking-tight text-neutral-950">
             IEUK Quality Framework
           </h3>
-          <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
+          <div className="h-px w-12 bg-[#5a0c16]/25" aria-hidden />
         </div>
 
         <div className="grid gap-4 md:grid-cols-2">
@@ -354,10 +351,10 @@ export default function Accreditation() {
           ).map(({ n, title, points }) => (
             <section
               key={title}
-              className="overflow-hidden rounded-2xl bg-white/70 p-4 shadow-[0_10px_30px_rgba(93,20,32,0.06)] ring-1 ring-[#5d1420]/10"
+              className="overflow-hidden rounded-2xl bg-white/70 p-4 shadow-[0_10px_30px_rgba(90,12,22,0.06)] ring-1 ring-[#5a0c16]/10"
             >
               <header className="flex items-center gap-3">
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#5d1420] text-sm font-bold text-white shadow-sm">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#5a0c16] text-sm font-bold text-white shadow-sm">
                   {n}
                 </span>
                 <div>
@@ -387,7 +384,7 @@ export default function Accreditation() {
           <h3 className="text-lg font-semibold tracking-tight text-neutral-950">
           Our Quality Assurance Process
           </h3>
-          <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
+          <div className="h-px w-12 bg-[#5a0c16]/25" aria-hidden />
         </div>
 
         <p className="max-w-prose text-neutral-700">
@@ -413,10 +410,10 @@ export default function Accreditation() {
           ).map(({ k, v }) => (
             <li
               key={k}
-              className="flex items-start gap-3 rounded-2xl bg-white/70 p-4 shadow-[0_10px_30px_rgba(93,20,32,0.06)] ring-1 ring-[#5d1420]/10"
+              className="flex items-start gap-3 rounded-2xl bg-white/70 p-4 shadow-[0_10px_30px_rgba(90,12,22,0.06)] ring-1 ring-[#5a0c16]/10"
             >
               <span
-                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-2xl bg-[#5d1420] text-white shadow-sm"
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-2xl bg-[#5a0c16] text-white shadow-sm"
                 aria-hidden
               >
                 <Check className="h-5 w-5" strokeWidth={2.25} />
@@ -430,7 +427,7 @@ export default function Accreditation() {
         </ul>
       </section>
 
-      <section className="ieuk-reveal relative mt-10 overflow-hidden rounded-2xl bg-[#60101d] px-5 py-10 text-white shadow-[0_14px_48px_rgba(93,20,32,0.22)] sm:px-6 sm:py-12 [--ieuk-delay:360ms]">
+      <section className="ieuk-reveal relative mt-10 overflow-hidden rounded-2xl bg-[#4a0a11] px-5 py-10 text-white shadow-[0_14px_48px_rgba(90,12,22,0.22)] sm:px-6 sm:py-12 [--ieuk-delay:360ms]">
         <div
           className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent"
           aria-hidden

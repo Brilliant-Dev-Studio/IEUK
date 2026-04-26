@@ -1,3 +1,4 @@
+import { ChevronsLeftRight } from 'lucide-react'
 import PageShell from './PageShell'
 import ParallaxImage from '../components/ParallaxImage'
 import { images } from '../data/images'
@@ -186,7 +187,7 @@ export default function IEUKRegistry() {
           <h2 className="text-xl font-semibold tracking-tight text-neutral-950 sm:text-2xl">
             Registry of IEUK Accredited Institutions and Members
           </h2>
-          <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
+          <div className="h-px w-12 bg-[#5a0c16]/25" aria-hidden />
           <p className="max-w-prose text-neutral-700">
             As International English UK (IEUK) continues its rapid global
             expansion worldwide, our registry now encompasses a diverse
@@ -196,7 +197,7 @@ export default function IEUKRegistry() {
           </p>
         </div>
 
-        <figure className="ieuk-frame overflow-hidden bg-white shadow-[0_12px_40px_rgba(93,20,32,0.10)] lg:justify-self-end">
+        <figure className="ieuk-frame overflow-hidden bg-white shadow-[0_12px_40px_rgba(90,12,22,0.10)] lg:justify-self-end">
           <ParallaxImage
             src={images.registryHero}
             alt="IEUK Registry — secure record keeping and services"
@@ -213,7 +214,7 @@ export default function IEUKRegistry() {
           <h3 className="text-lg font-semibold tracking-tight text-neutral-950">
             List of IEUK Accredited Institutions
           </h3>
-          <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
+          <div className="h-px w-12 bg-[#5a0c16]/25" aria-hidden />
         </div>
 
         <p className="w-full max-w-none text-neutral-700">
@@ -224,8 +225,8 @@ export default function IEUKRegistry() {
         </p>
 
         <div className="grid gap-4 md:grid-cols-2">
-          <section className="rounded-2xl bg-white/70 p-5 shadow-[0_10px_30px_rgba(93,20,32,0.06)] ring-1 ring-[#5d1420]/10">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5d1420]/70">
+          <section className="rounded-2xl bg-white/70 p-5 shadow-[0_10px_30px_rgba(90,12,22,0.06)] ring-1 ring-[#5a0c16]/10">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5a0c16]/70">
               Status
             </p>
             <p className="mt-2 text-sm leading-relaxed text-neutral-700">
@@ -233,8 +234,8 @@ export default function IEUKRegistry() {
             </p>
           </section>
 
-          <section className="rounded-2xl bg-white/70 p-5 shadow-[0_10px_30px_rgba(93,20,32,0.06)] ring-1 ring-[#5d1420]/10">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5d1420]/70">
+          <section className="rounded-2xl bg-white/70 p-5 shadow-[0_10px_30px_rgba(90,12,22,0.06)] ring-1 ring-[#5a0c16]/10">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5a0c16]/70">
               Privileges
             </p>
             <p className="mt-2 text-sm leading-relaxed text-neutral-700">
@@ -246,45 +247,30 @@ export default function IEUKRegistry() {
       </section>
 
       <section className="ieuk-reveal mt-10 space-y-5 [--ieuk-delay:200ms]">
-        <div className="grid gap-4 lg:grid-cols-2">
+        <div className="grid min-w-0 gap-4 lg:grid-cols-2">
           {accreditedRegions.map(({ title, items }) => (
             <section
               key={title}
-              className="bg-white/70 p-4 shadow-[0_10px_30px_rgba(93,20,32,0.06)] ring-1 ring-[#5d1420]/10"
+              className="min-w-0 bg-white/70 p-4 shadow-[0_10px_30px_rgba(90,12,22,0.06)] ring-1 ring-[#5a0c16]/10"
             >
               <p className="mb-3 font-semibold text-neutral-950">{title}</p>
-              {/* Mobile: list (more reliable than tables on small screens) */}
-              <ol className="space-y-2 text-sm text-neutral-700 sm:hidden">
-                {items.map((raw, idx) => {
-                  const match = raw.match(/^(.*)\s\((.*)\)$/)
-                  const centre = match?.[1] ?? raw
-                  const location = match?.[2] ?? ''
-                  return (
-                    <li key={raw} className="rounded-xl bg-white/60 p-3 ring-1 ring-[#5d1420]/10">
-                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-600">
-                        No. {idx + 1}
-                      </p>
-                      <p className="mt-1 font-medium text-neutral-950">{centre}</p>
-                      {location ? (
-                        <p className="mt-0.5 text-xs text-neutral-600">{location}</p>
-                      ) : null}
-                    </li>
-                  )
-                })}
-              </ol>
-
-              {/* Tablet/Desktop: table */}
-              <div className="hidden overflow-x-auto sm:block">
-                <table className="w-full min-w-[560px] border-collapse text-sm">
+              <div className="relative">
+                <div
+                  className="ieuk-registry-table-scroll w-full min-w-0 -mx-1 overflow-x-auto overscroll-x-contain px-0 pb-1 [scrollbar-gutter:stable] [-webkit-overflow-scrolling:touch] sm:mx-0 touch-pan-x"
+                  role="region"
+                  aria-label={`${title} table, scroll horizontally for all columns`}
+                  tabIndex={0}
+                >
+                  <table className="w-full min-w-[560px] border-collapse text-sm">
                   <thead>
                     <tr className="text-left">
-                      <th className="w-14 border border-[#5d1420]/15 bg-white/60 px-3 py-2 font-semibold text-neutral-950">
+                      <th className="w-14 border border-[#5a0c16]/15 bg-white/60 px-3 py-2 font-semibold text-neutral-950">
                         No.
                       </th>
-                      <th className="border border-[#5d1420]/15 bg-white/60 px-3 py-2 font-semibold text-neutral-950">
+                      <th className="border border-[#5a0c16]/15 bg-white/60 px-3 py-2 font-semibold text-neutral-950">
                         Centre
                       </th>
-                      <th className="border border-[#5d1420]/15 bg-white/60 px-3 py-2 font-semibold text-neutral-950">
+                      <th className="border border-[#5a0c16]/15 bg-white/60 px-3 py-2 font-semibold text-neutral-950">
                         Location
                       </th>
                     </tr>
@@ -296,20 +282,29 @@ export default function IEUKRegistry() {
                       const location = match?.[2] ?? ''
                       return (
                         <tr key={raw}>
-                          <td className="border border-[#5d1420]/15 px-3 py-2 align-top text-neutral-600">
+                          <td className="border border-[#5a0c16]/15 px-3 py-2 align-top text-neutral-600">
                             {idx + 1}
                           </td>
-                          <td className="border border-[#5d1420]/15 px-3 py-2 align-top">
+                          <td className="border border-[#5a0c16]/15 px-3 py-2 align-top">
                             <p className="font-medium text-neutral-950">{centre}</p>
                           </td>
-                          <td className="border border-[#5d1420]/15 px-3 py-2 align-top">
+                          <td className="border border-[#5a0c16]/15 px-3 py-2 align-top">
                             {location}
                           </td>
                         </tr>
                       )
                     })}
                   </tbody>
-                </table>
+                  </table>
+                </div>
+                <div
+                  className="pointer-events-none absolute inset-y-0 right-0 z-[1] w-10 bg-gradient-to-l from-white from-40% to-transparent sm:w-12 md:hidden"
+                  aria-hidden
+                />
+                <p className="mt-1.5 flex items-center gap-1.5 text-[11px] font-medium text-[#5a0c16]/75 md:hidden">
+                  <ChevronsLeftRight className="h-3.5 w-3.5 shrink-0" aria-hidden />
+                  <span>Scroll sideways for all columns</span>
+                </p>
               </div>
             </section>
           ))}
@@ -321,7 +316,7 @@ export default function IEUKRegistry() {
           <h3 className="text-lg font-semibold tracking-tight text-neutral-950">
             List of IEUK Associate and Corporate Members
           </h3>
-          <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
+          <div className="h-px w-12 bg-[#5a0c16]/25" aria-hidden />
         </div>
 
         <p className="w-full max-w-none text-neutral-700">
@@ -332,8 +327,8 @@ export default function IEUKRegistry() {
         </p>
 
         <div className="grid gap-4 md:grid-cols-2">
-          <section className="rounded-2xl bg-white/70 p-5 shadow-[0_10px_30px_rgba(93,20,32,0.06)] ring-1 ring-[#5d1420]/10">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5d1420]/70">
+          <section className="rounded-2xl bg-white/70 p-5 shadow-[0_10px_30px_rgba(90,12,22,0.06)] ring-1 ring-[#5a0c16]/10">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5a0c16]/70">
               Status
             </p>
             <p className="mt-2 text-sm leading-relaxed text-neutral-700">
@@ -341,8 +336,8 @@ export default function IEUKRegistry() {
             </p>
           </section>
 
-          <section className="rounded-2xl bg-white/70 p-5 shadow-[0_10px_30px_rgba(93,20,32,0.06)] ring-1 ring-[#5d1420]/10">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5d1420]/70">
+          <section className="rounded-2xl bg-white/70 p-5 shadow-[0_10px_30px_rgba(90,12,22,0.06)] ring-1 ring-[#5a0c16]/10">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5a0c16]/70">
               Privileges
             </p>
             <p className="mt-2 text-sm leading-relaxed text-neutral-700">
@@ -352,7 +347,7 @@ export default function IEUKRegistry() {
           </section>
         </div>
 
-        <div className="overflow-hidden rounded-2xl bg-white/70 p-5 shadow-[0_10px_30px_rgba(93,20,32,0.06)] ring-1 ring-[#5d1420]/10">
+        <div className="overflow-hidden rounded-2xl bg-white/70 p-5 shadow-[0_10px_30px_rgba(90,12,22,0.06)] ring-1 ring-[#5a0c16]/10">
           <ol className="list-decimal space-y-1 pl-5 text-sm text-neutral-700 lg:columns-2 lg:gap-10">
             {associateAndCorporateMembers.map((name) => (
               <li key={name} className="break-inside-avoid">
@@ -368,7 +363,7 @@ export default function IEUKRegistry() {
           <h3 className="text-lg font-semibold tracking-tight text-neutral-950">
             Security &amp; Anti-Fraud Protection
           </h3>
-          <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
+          <div className="h-px w-12 bg-[#5a0c16]/25" aria-hidden />
         </div>
 
         <p className="w-full max-w-none text-neutral-700">
@@ -378,8 +373,8 @@ export default function IEUKRegistry() {
         </p>
 
         <div className="grid gap-4 lg:grid-cols-2">
-          <section className="rounded-2xl bg-white/70 p-5 shadow-[0_10px_30px_rgba(93,20,32,0.06)] ring-1 ring-[#5d1420]/10">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5d1420]/70">
+          <section className="rounded-2xl bg-white/70 p-5 shadow-[0_10px_30px_rgba(90,12,22,0.06)] ring-1 ring-[#5a0c16]/10">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5a0c16]/70">
               Encrypted Database
             </p>
             <p className="mt-2 text-sm leading-relaxed text-neutral-700">
@@ -389,8 +384,8 @@ export default function IEUKRegistry() {
             </p>
           </section>
 
-          <section className="rounded-2xl bg-white/70 p-5 shadow-[0_10px_30px_rgba(93,20,32,0.06)] ring-1 ring-[#5d1420]/10">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5d1420]/70">
+          <section className="rounded-2xl bg-white/70 p-5 shadow-[0_10px_30px_rgba(90,12,22,0.06)] ring-1 ring-[#5a0c16]/10">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5a0c16]/70">
               Real-Time Sync
             </p>
             <p className="mt-2 text-sm leading-relaxed text-neutral-700">
@@ -401,8 +396,8 @@ export default function IEUKRegistry() {
           </section>
         </div>
 
-        <section className="rounded-2xl border border-[#5d1420]/15 bg-[#5d1420]/[0.035] p-5 text-sm text-neutral-800">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5d1420]/70">
+        <section className="rounded-2xl border border-[#5a0c16]/15 bg-[#5a0c16]/[0.035] p-5 text-sm text-neutral-800">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5a0c16]/70">
             ⚠ Notice to Stakeholders
           </p>
           <p className="mt-2 leading-relaxed text-neutral-700">
@@ -410,7 +405,7 @@ export default function IEUKRegistry() {
             not appear in this registry, please report it immediately to{' '}
             <a
               href="mailto:contact@ieuk.org"
-              className="font-semibold text-[#5d1420] underline decoration-[#5d1420]/30 underline-offset-4 hover:decoration-[#5d1420]/60"
+              className="font-semibold text-[#5a0c16] underline decoration-[#5a0c16]/30 underline-offset-4 hover:decoration-[#5a0c16]/60"
             >
               contact@ieuk.org
             </a>

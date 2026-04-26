@@ -53,7 +53,7 @@ export default function Layout() {
       <Header />
       <main
         id="site-main"
-        className="w-full flex-1 overflow-x-hidden px-4 py-8 pb-14 sm:px-5 md:px-10 lg:px-[50px]"
+        className="w-full min-w-0 flex-1 overflow-x-hidden px-4 py-8 pb-14 sm:px-5 md:px-10 lg:px-[50px]"
       >
         <Outlet />
       </main>

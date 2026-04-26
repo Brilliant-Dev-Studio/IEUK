@@ -7,7 +7,7 @@ type PageShellProps = {
 
 export default function PageShell({ title, children }: PageShellProps) {
   return (
-    <article className="w-full">
+    <article className="w-full min-w-0 max-w-full">
       {title?.trim?.() ? (
         <h1 className="mb-4 mt-0 text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
           {title}

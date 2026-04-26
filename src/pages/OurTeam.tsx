@@ -48,8 +48,7 @@ export default function OurTeam() {
           <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
         </div>
         <p className="w-full max-w-none text-neutral-700">
-          Meet our representatives across executive leadership, linguistic
-          expertise, and creative disciplines.
+        English UK is defined by a curated leadership circle, dedicated to preserving the "Gold Standard" of English language education. Our assembly of executive, linguistic, and creative specialists reflects the deep-rooted professionalism and distinction that our organization represents.
         </p>
       </section>
 
@@ -59,15 +58,8 @@ export default function OurTeam() {
             key={alt}
             className="overflow-hidden rounded-2xl bg-white/70 shadow-[0_10px_30px_rgba(93,20,32,0.06)] ring-1 ring-[#5d1420]/10"
           >
-            <div className="flex items-center justify-between gap-3 px-4 py-3">
+            <div className="px-4 py-3">
               <p className="font-semibold text-neutral-950">{title}</p>
-              <button
-                type="button"
-                onClick={() => setOpenKey(alt)}
-                className="rounded-xl bg-[#5d1420]/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-[#5d1420] ring-1 ring-[#5d1420]/15 hover:bg-[#5d1420]/15"
-              >
-                View
-              </button>
             </div>
             <figure className="ieuk-frame flex items-center justify-center overflow-hidden bg-white">
               <button

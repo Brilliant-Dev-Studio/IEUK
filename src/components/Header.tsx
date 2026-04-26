@@ -54,15 +54,15 @@ export default function Header() {
 
             <div
               className={[
-                'fixed inset-y-0 right-0 z-[110] flex w-[min(100%,22rem)] flex-col overflow-hidden rounded-l-2xl border-l border-[#5d1420]/12 bg-white shadow-[0_0_0_1px_rgba(93,20,32,0.04),-12px_0_48px_rgba(26,6,9,0.18)]',
+                'fixed inset-y-0 right-0 z-[110] flex w-[min(100%,22rem)] flex-col overflow-hidden rounded-l-2xl border-l border-[#5a0c16]/12 bg-white shadow-[0_0_0_1px_rgba(90,12,22,0.04),-12px_0_48px_rgba(18,3,4,0.18)]',
                 'transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] will-change-transform',
                 menuOpen ? 'translate-x-0' : 'translate-x-full pointer-events-none',
               ].join(' ')}
               aria-hidden={!menuOpen}
             >
-              <div className="h-[3px] shrink-0 bg-gradient-to-r from-[#5d1420] via-[#7a1f30] to-[#5d1420]/70" aria-hidden />
-              <div className="flex h-[81px] shrink-0 items-end border-b border-[#5d1420]/10 bg-gradient-to-b from-[var(--ieuk-blush)]/70 to-white px-5 pb-3 pt-2">
-                <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#5d1420]">Navigate</p>
+              <div className="h-[3px] shrink-0 bg-gradient-to-r from-[#5a0c16] via-[#6a1a22] to-[#5a0c16]/70" aria-hidden />
+              <div className="flex h-[81px] shrink-0 items-end border-b border-[#5a0c16]/10 bg-gradient-to-b from-[var(--ieuk-blush)]/70 to-white px-5 pb-3 pt-2">
+                <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#5a0c16]">Navigate</p>
               </div>
               <nav
                 className="flex flex-1 flex-col gap-0.5 overflow-y-auto px-3 py-4 pb-[max(1rem,env(safe-area-inset-bottom))]"
@@ -79,7 +79,7 @@ export default function Header() {
                       [
                         'group flex items-center justify-between gap-3 rounded-xl px-3.5 py-3.5 text-[15px] font-medium tracking-wide transition-[color,background-color,border-color] duration-200',
                         isActive
-                          ? 'bg-[var(--ieuk-blush)] text-[#5d1420] ring-1 ring-[#5d1420]/12'
+                          ? 'bg-[var(--ieuk-blush)] text-[#5a0c16] ring-1 ring-[#5a0c16]/12'
                           : 'text-neutral-700 hover:bg-neutral-50 hover:text-neutral-900',
                       ].join(' ')
                     }
@@ -91,7 +91,7 @@ export default function Header() {
                           className={[
                             'h-4 w-4 shrink-0 transition-[color,transform] duration-200',
                             isActive
-                              ? 'translate-x-0 text-[#5d1420]'
+                              ? 'translate-x-0 text-[#5a0c16]'
                               : 'text-neutral-400 group-hover:translate-x-0.5 group-hover:text-neutral-600',
                           ].join(' ')}
                           aria-hidden

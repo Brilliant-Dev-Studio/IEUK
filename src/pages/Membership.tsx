@@ -11,12 +11,6 @@ import { images } from '../data/images'
 import Seo from '../components/Seo'
 
 export default function Membership() {
-  const bleed =
-    'relative -mx-4 w-[calc(100%+2rem)] sm:-mx-5 sm:w-[calc(100%+2.5rem)] md:-mx-10 md:w-[calc(100%+5rem)] lg:-mx-[50px] lg:w-[calc(100%+100px)]'
-
-  const bleedLg =
-    'lg:relative lg:left-1/2 lg:right-1/2 lg:-ml-[50vw] lg:-mr-[50vw] lg:w-screen'
-
   const benefits = [
     {
       n: '1',
@@ -77,36 +71,34 @@ export default function Membership() {
         path="/membership"
       />
       <section className="">
-        <section className="ieuk-reveal space-y-4 py-2 [--ieuk-delay:120ms]">
-          <h2 className="text-xl font-semibold tracking-tight text-neutral-950 sm:text-2xl">
-            Elevate Your Institution: The Benefits of IEUK Membership
-          </h2>
-          <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
-          <p className="w-full max-w-none text-neutral-700">
-            At International English UK (IEUK), we believe that education is
-            stronger when we work together. By joining our professional
-            membership network, you align your organisation with a global
-            standard of British academic quality and gain access to a suite of
-            professional resources designed to help your institution thrive.
-          </p>
-        </section>
+        <div className="ieuk-reveal grid gap-5 py-2 [--ieuk-delay:120ms] md:grid-cols-2 md:items-start md:gap-8 lg:grid-cols-[1.05fr_1fr] lg:items-center">
+          <div className="space-y-4">
+            <h2 className="text-xl font-semibold tracking-tight text-neutral-950 sm:text-2xl">
+              Elevate Your Institution: The Benefits of IEUK Membership
+            </h2>
+            <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
+            <p className="w-full max-w-none text-neutral-700">
+              At International English UK (IEUK), we believe that education is
+              stronger when we work together. By joining our professional
+              membership network, you align your organisation with a global
+              standard of British academic quality and gain access to a suite of
+              professional resources designed to help your institution thrive.
+            </p>
+          </div>
 
-        <figure className={`${bleed} ${bleedLg} relative mt-6 overflow-hidden bg-white`}>
-          <ParallaxImage
-            src={images.membershipHero}
-            alt="IEUK membership benefits and professional development network"
-            className="w-full h-auto object-contain bg-white"
-            width={1200}
-            height={720}
-            loading="lazy"
-            decoding="async"
-            strength={0}
-          />
-          <div
-            className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/55 via-black/10 to-transparent"
-            aria-hidden
-          />
-        </figure>
+          <figure className="ieuk-frame overflow-hidden shadow-[0_12px_28px_rgba(15,23,42,0.08)]">
+            <ParallaxImage
+              src={images.membershipHero}
+              alt="IEUK membership benefits and professional development network"
+              className="h-[240px] w-full !bg-transparent object-cover object-center sm:h-[280px] md:h-[320px] lg:h-[380px] xl:h-[420px]"
+              width={1200}
+              height={720}
+              loading="lazy"
+              decoding="async"
+              strength={0}
+            />
+          </figure>
+        </div>
 
         <section className="ieuk-reveal mt-10 space-y-5 [--ieuk-delay:160ms]">
           <div className="space-y-2">

@@ -13,7 +13,7 @@ export default function AboutUs() {
       />
       <div className="space-y-10">
         <section className="space-y-5">
-          <div className="grid gap-5 md:grid-cols-2 md:items-start md:gap-8 lg:grid-cols-1">
+          <div className="grid gap-5 md:grid-cols-2 md:items-start md:gap-8 lg:grid-cols-[1.05fr_1fr] lg:items-center">
             <div className="space-y-3">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5d1420]/80">
                 About Us
@@ -35,11 +35,11 @@ export default function AboutUs() {
               </p>
             </div>
 
-            <figure className="ieuk-frame overflow-hidden shadow-[0_12px_28px_rgba(15,23,42,0.08)] lg:-mx-[calc((100vw-100%)/2)] lg:w-screen">
+            <figure className="ieuk-frame overflow-hidden shadow-[0_12px_28px_rgba(15,23,42,0.08)]">
               <ParallaxImage
                 src={images.aboutHero}
                 alt="IEUK community and international educators gathering"
-                className="h-[320px] w-full object-cover object-center sm:h-[380px] lg:h-[520px]"
+                className="h-[240px] w-full !bg-transparent object-cover object-center sm:h-[280px] md:h-[320px] lg:h-[380px] xl:h-[420px]"
                 loading="lazy"
                 decoding="async"
                 strength={10}
@@ -158,7 +158,7 @@ export default function AboutUs() {
                 language instruction, you are part of a vibrant ecosystem.
                 By joining IEUK, you align yourself with a community that
                 prioritizes professional growth, academic excellence, and the
-                transformative power of language. Join us in shaping the future of English language education.
+                transformative power of language. Let’s build the future of English language education together.
               </p>
               <p>
                 

@@ -14,6 +14,7 @@ import ourTeamLinguistic from '../assets/6. Our Team Page Photos/2 Our Team Page
 import ourTeamCreative from '../assets/6. Our Team Page Photos/3 Our Team Page.jpg'
 import registryHero from '../assets/5. IEUK Registry Page Photos/1 IEUK Registry Page.png'
 import contactHero from '../assets/7. Contact Us Page Photos/1 Contact Us Page.png'
+import contactFormSectionBg from '../assets/contact-form-section-bg.png'
 
 export const images = {
   logo,
@@ -47,6 +48,8 @@ export const images = {
   registryHero,
   /** Contact — get in touch */
   contactHero,
+  /** Contact — form section (maroon mesh) background */
+  contactFormSectionBg,
   /** Teaching & professional development — overlay cards */
   homeSpotlight: homeHero,
 } as const

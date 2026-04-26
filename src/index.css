@@ -4,8 +4,8 @@
   :root {
     color-scheme: light;
     --ieuk-blush: #fff0f3;
-    --ieuk-burgundy: #5d1420;
-    --ieuk-burgundy-deep: #60101d;
+    --ieuk-burgundy: #5a0c16;
+    --ieuk-burgundy-deep: #4a0a11;
   }
 
   body {
@@ -61,14 +61,38 @@
     padding: 1px;
     background: linear-gradient(
       90deg,
-      rgba(93, 20, 32, 0.55),
+      rgba(90, 12, 22, 0.55),
       rgba(11, 47, 115, 0.55),
-      rgba(93, 20, 32, 0.55)
+      rgba(90, 12, 22, 0.55)
     );
   }
 
   .ieuk-frame > img {
     display: block;
     background: #fff;
+  }
+
+  /** IEUK Registry — obvious horizontal scrollbar on centre tables */
+  .ieuk-registry-table-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(90, 12, 22, 0.45) rgba(0, 0, 0, 0.06);
+  }
+
+  .ieuk-registry-table-scroll::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .ieuk-registry-table-scroll::-webkit-scrollbar-track {
+    border-radius: 9999px;
+    background: rgba(0, 0, 0, 0.06);
+  }
+
+  .ieuk-registry-table-scroll::-webkit-scrollbar-thumb {
+    border-radius: 9999px;
+    background: rgba(90, 12, 22, 0.4);
+  }
+
+  .ieuk-registry-table-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(90, 12, 22, 0.55);
   }
 }

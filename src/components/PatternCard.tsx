@@ -34,9 +34,9 @@ export default function PatternCard({
           }
         : null)}
       className={[
-        'group relative block overflow-hidden rounded-2xl p-5 text-white shadow-[0_12px_36px_rgba(93,20,32,0.22)] ring-1 ring-white/10 transition-[transform,box-shadow] duration-300',
+        'group relative block overflow-hidden rounded-2xl p-5 text-white shadow-[0_12px_36px_rgba(90,12,22,0.22)] ring-1 ring-white/10 transition-[transform,box-shadow] duration-300',
         href
-          ? 'hover:-translate-y-0.5 hover:shadow-[0_16px_44px_rgba(93,20,32,0.28)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5d1420]'
+          ? 'hover:-translate-y-0.5 hover:shadow-[0_16px_44px_rgba(90,12,22,0.28)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5a0c16]'
           : '',
         skins[pattern],
       ].join(' ')}
@@ -91,7 +91,7 @@ export default function PatternCard({
           </span>
 
           {href && (
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#60101d] shadow-md transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#4a0a11] shadow-md transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
               <ArrowUpRight className="h-5 w-5" aria-hidden />
             </span>
           )}
