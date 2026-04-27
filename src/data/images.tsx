@@ -1,4 +1,5 @@
 import logo from '../assets/IEUK_Logo.jpg'
+import logoHeader from '../assets/IEUK_Logo-removebg.png'
 import homeHero from '../assets/1. Home Page Photos/1 Home Page.jpg'
 import homeSecondary from '../assets/1. Home Page Photos/2 Home Page.png'
 import aboutHero from '../assets/2. About Us Page Photos/1 About Us.jpg'
@@ -18,6 +19,8 @@ import contactFormSectionBg from '../assets/contact-form-section-bg.png'
 
 export const images = {
   logo,
+  /** Header — transparent PNG for coloured backgrounds */
+  logoHeader,
   /** Global learning & communication — hero */
   homeHero,
   /** Quality & academic excellence — supporting visual */

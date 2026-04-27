@@ -18,12 +18,16 @@ export default function App() {
         <Routes>
           <Route element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="about" element={<AboutUs />} />
+            <Route path="about-us" element={<AboutUs />} />
+            <Route path="our-team" element={<OurTeam />} />
+            <Route path="contact-us" element={<ContactUs />} />
+            <Route path="ieuk-registry" element={<IEUKRegistry />} />
+            <Route path="about" element={<Navigate to="/about-us" replace />} />
+            <Route path="team" element={<Navigate to="/our-team" replace />} />
+            <Route path="contact" element={<Navigate to="/contact-us" replace />} />
+            <Route path="registry" element={<Navigate to="/ieuk-registry" replace />} />
             <Route path="accreditation" element={<Accreditation />} />
             <Route path="membership" element={<Membership />} />
-            <Route path="registry" element={<IEUKRegistry />} />
-            <Route path="team" element={<OurTeam />} />
-            <Route path="contact" element={<ContactUs />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
         </Routes>

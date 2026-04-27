@@ -1,4 +1,3 @@
-import { ChevronsLeftRight } from 'lucide-react'
 import PageShell from './PageShell'
 import ParallaxImage from '../components/ParallaxImage'
 import { images } from '../data/images'
@@ -180,7 +179,7 @@ export default function IEUKRegistry() {
       <Seo
         title="IEUK Registry"
         description="Browse the registry of IEUK accredited institutions, associate members, and corporate members, alongside security and anti-fraud protections."
-        path="/registry"
+        path="/ieuk-registry"
       />
       <section className="ieuk-reveal space-y-6 py-2 [--ieuk-delay:120ms] lg:grid lg:grid-cols-[1fr_1.15fr] lg:items-center lg:gap-10 lg:space-y-0">
         <div className="space-y-4">
@@ -254,13 +253,13 @@ export default function IEUKRegistry() {
               className="min-w-0 bg-white/70 p-4 shadow-[0_10px_30px_rgba(90,12,22,0.06)] ring-1 ring-[#5a0c16]/10"
             >
               <p className="mb-3 font-semibold text-neutral-950">{title}</p>
-              <div className="relative">
-                <div
-                  className="ieuk-registry-table-scroll w-full min-w-0 -mx-1 overflow-x-auto overscroll-x-contain px-0 pb-1 [scrollbar-gutter:stable] [-webkit-overflow-scrolling:touch] sm:mx-0 touch-pan-x"
-                  role="region"
-                  aria-label={`${title} table, scroll horizontally for all columns`}
-                  tabIndex={0}
-                >
+              <div
+                className="ieuk-registry-table-scroll w-full min-w-0 -mx-1 overflow-x-auto overscroll-x-contain overscroll-y-auto px-0 pb-1 [-webkit-overflow-scrolling:touch] max-md:[scrollbar-gutter:auto] md:[scrollbar-gutter:stable] sm:mx-0"
+                data-lenis-prevent
+                role="region"
+                aria-label={`${title} accredited centres`}
+                tabIndex={0}
+              >
                   <table className="w-full min-w-[560px] border-collapse text-sm">
                   <thead>
                     <tr className="text-left">
@@ -296,15 +295,6 @@ export default function IEUKRegistry() {
                     })}
                   </tbody>
                   </table>
-                </div>
-                <div
-                  className="pointer-events-none absolute inset-y-0 right-0 z-[1] w-10 bg-gradient-to-l from-white from-40% to-transparent sm:w-12 md:hidden"
-                  aria-hidden
-                />
-                <p className="mt-1.5 flex items-center gap-1.5 text-[11px] font-medium text-[#5a0c16]/75 md:hidden">
-                  <ChevronsLeftRight className="h-3.5 w-3.5 shrink-0" aria-hidden />
-                  <span>Scroll sideways for all columns</span>
-                </p>
               </div>
             </section>
           ))}

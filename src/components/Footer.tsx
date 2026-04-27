@@ -35,10 +35,6 @@ export default function Footer() {
                 Committed to quality, empowering educators, and inspiring
                 learners worldwide.
               </p>
-              <div
-                className="mx-auto mt-5 h-px w-16 bg-white/15 lg:mx-0"
-                aria-hidden
-              />
             </div>
 
             <div className="lg:col-span-7">

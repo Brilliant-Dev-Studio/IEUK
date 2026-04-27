@@ -38,7 +38,7 @@ export default function OurTeam() {
       <Seo
         title="Our Team"
         description="Meet our representatives across executive leadership, linguistic expertise, and creative disciplines."
-        path="/team"
+        path="/our-team"
       />
       <section className="ieuk-reveal space-y-4 py-2 [--ieuk-delay:120ms]">
         <div className="space-y-2">
@@ -48,7 +48,7 @@ export default function OurTeam() {
           <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
         </div>
         <p className="w-full max-w-none text-neutral-700">
-        English UK is defined by a curated leadership circle, dedicated to preserving the "Gold Standard" of English language education. Our assembly of executive, linguistic, and creative specialists reflects the deep-rooted professionalism and distinction that our organization represents.
+        International English UK is defined by a curated leadership circle, dedicated to preserving the "Gold Standard" of English language education. Our assembly of executive, linguistic, and creative specialists reflects the deep-rooted professionalism and distinction that our organization represents.
         </p>
       </section>
 

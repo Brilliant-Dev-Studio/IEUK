@@ -83,27 +83,24 @@ export default function ContactUs() {
   const bleed =
     'relative -mx-4 w-[calc(100%+2rem)] sm:-mx-5 sm:w-[calc(100%+2.5rem)] md:-mx-10 md:w-[calc(100%+5rem)] lg:-mx-[50px] lg:w-[calc(100%+100px)]'
 
-  const bleedLg =
-    'lg:relative lg:left-1/2 lg:right-1/2 lg:-ml-[50vw] lg:-mr-[50vw] lg:w-screen'
-
   return (
     <PageShell title="">
       <Seo
         title="Contact Us"
         description="Get in touch with IEUK for accreditation, membership, and standards inquiries. We aim to respond promptly."
-        path="/contact"
+        path="/contact-us"
       />
       <section className="">
-        <figure className={`${bleed} ${bleedLg} relative -mt-8 mb-7 overflow-hidden bg-neutral-100`}>
+        <figure className={`${bleed} relative -mt-8 mb-7 bg-neutral-100`}>
           <ParallaxImage
             src={images.contactHero}
             alt="Contact International English UK (IEUK)"
-            className="h-auto w-full object-contain object-center"
+            className="block h-auto w-full max-w-full object-contain object-center"
             width={1200}
             height={720}
             fetchPriority="high"
             decoding="async"
-            strength={8}
+            strength={0}
           />
         </figure>
 
@@ -198,50 +195,11 @@ export default function ContactUs() {
         </section>
 
         <section
-          className={`ieuk-reveal relative mt-10 min-h-0 sm:mt-12 [--ieuk-delay:280ms] ${bleed}`}
+          className="ieuk-reveal mt-10 min-h-0 sm:mt-12 [--ieuk-delay:280ms]"
           aria-labelledby="contact-form-title"
         >
-          <div
-            className="absolute inset-0 z-0"
-            style={{
-              backgroundColor: '#3a0909',
-              backgroundImage: `url(${images.contactFormSectionBg})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-            aria-hidden
-          />
-          <div
-            className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-b from-black/15 via-transparent to-black/25"
-            aria-hidden
-          />
-          {/* Maroon + navy corner glows (IEUK) */}
-          <div
-            className="pointer-events-none absolute inset-0 z-0"
-            style={{
-              background: `
-                radial-gradient(ellipse 88% 62% at 0% 0%, rgba(90, 12, 22, 0.28) 0%, transparent 55%),
-                radial-gradient(ellipse 72% 50% at 100% 100%, rgba(11, 47, 115, 0.2) 0%, transparent 52%)
-              `,
-            }}
-            aria-hidden
-          />
-          {/* Diagonal line grid */}
-          <div
-            className="pointer-events-none absolute inset-0 z-0 opacity-35"
-            style={{
-              backgroundImage:
-                'repeating-linear-gradient(135deg, rgba(255,255,255,0.06) 0, rgba(255,255,255,0.06) 1px, transparent 1px, transparent 10px)',
-            }}
-            aria-hidden
-          />
-          {/* Fine dot grain */}
-          <div
-            className="pointer-events-none absolute inset-0 z-0 opacity-40 [background-size:4px_4px] [background-image:radial-gradient(rgba(255,255,255,0.12)_0.45px,transparent_0.45px)]"
-            aria-hidden
-          />
-          <div className="relative z-10 px-0 py-0 sm:px-4 sm:py-8 md:px-6 md:py-10 lg:px-8 lg:py-12">
-            <div className="mx-auto w-full max-w-full overflow-hidden rounded-none border-0 bg-white shadow-none sm:max-w-xl sm:rounded-2xl sm:border sm:border-white/20 sm:shadow-[0_8px_40px_rgba(0,0,0,0.1),0_0_0_1px_rgba(0,0,0,0.04)] sm:ring-1 sm:ring-black/[0.04]">
+          <div className="w-full max-w-full sm:max-w-xl">
+            <div className="overflow-hidden rounded-2xl border border-stone-200/90 bg-white shadow-[0_8px_40px_rgba(0,0,0,0.06),0_0_0_1px_rgba(0,0,0,0.04)] ring-1 ring-black/[0.04]">
           <form
             id="ieuk-contact-form"
             onSubmit={handleContactSubmit}
@@ -249,9 +207,7 @@ export default function ContactUs() {
             aria-describedby="contact-form-desc contact-form-required"
           >
             <header className="border-b border-stone-100 pb-5">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#5a0c16]/80">
-              Get in touch
-            </p>
+          
             <h2
               id="contact-form-title"
               className="mt-1.5 text-2xl font-semibold tracking-tight text-neutral-950 sm:text-[1.65rem] sm:leading-snug"
@@ -295,7 +251,6 @@ export default function ContactUs() {
                     }
                   }}
                   className={`mt-2 ${inputClassName}`}
-                  placeholder="Your full name"
                 />
               </div>
               <div className="min-w-0 sm:col-span-1">
@@ -321,7 +276,6 @@ export default function ContactUs() {
                     }
                   }}
                   className={`mt-2 ${inputClassName}`}
-                  placeholder="you@example.com"
                 />
               </div>
               <div className="min-w-0 sm:col-span-2">
@@ -345,7 +299,6 @@ export default function ContactUs() {
                     }
                   }}
                   className={`mt-2 ${inputClassName}`}
-                  placeholder="What is this regarding?"
                 />
               </div>
               <div className="min-w-0 sm:col-span-2">
@@ -369,7 +322,6 @@ export default function ContactUs() {
                     }
                   }}
                   className={`mt-2 ${textAreaClassName}`}
-                  placeholder="How can we help you?"
                 />
               </div>
             </div>
@@ -422,9 +374,7 @@ export default function ContactUs() {
                   'Submit'
                 )}
               </button>
-              <p className="text-center text-[11px] text-neutral-400 sm:text-left">
-                We aim to respond within 24–48 business hours
-              </p>
+             
             </div>
           </form>
             </div>

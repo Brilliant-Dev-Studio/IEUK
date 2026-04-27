@@ -2,9 +2,19 @@ import { useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import Footer from './Footer'
 import Header from './Header'
+import { useLenis } from './LenisProvider'
 
 export default function Layout() {
   const location = useLocation()
+  const lenis = useLenis()
+
+  useEffect(() => {
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: true })
+    } else {
+      window.scrollTo(0, 0)
+    }
+  }, [location.pathname, lenis])
 
   useEffect(() => {
     if (typeof window === 'undefined') return

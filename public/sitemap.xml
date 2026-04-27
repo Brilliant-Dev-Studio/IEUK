@@ -7,7 +7,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ieuk.org/about</loc>
+    <loc>https://ieuk.org/about-us</loc>
     <lastmod>2026-04-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -25,19 +25,19 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ieuk.org/registry</loc>
+    <loc>https://ieuk.org/ieuk-registry</loc>
     <lastmod>2026-04-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ieuk.org/team</loc>
+    <loc>https://ieuk.org/our-team</loc>
     <lastmod>2026-04-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ieuk.org/contact</loc>
+    <loc>https://ieuk.org/contact-us</loc>
     <lastmod>2026-04-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>

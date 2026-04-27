@@ -9,11 +9,11 @@ export default function AboutUs() {
       <Seo
         title="About Us"
         description="Learn who we are, our mission, and our vision for raising standards in English language education worldwide."
-        path="/about"
+        path="/about-us"
       />
       <div className="space-y-10">
         <section className="space-y-5">
-          <div className="grid gap-5 md:grid-cols-2 md:items-start md:gap-8 lg:grid-cols-[1.05fr_1fr] lg:items-center">
+          <div className="grid gap-5 md:grid-cols-[1fr_1.08fr] md:items-start md:gap-8 lg:grid-cols-[1fr_1.16fr] lg:items-center">
             <div className="space-y-3">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5d1420]/80">
                 About Us
@@ -31,30 +31,24 @@ export default function AboutUs() {
                 serve as a bridge for global educators and institutions that are
                 looking to engage with professional membership and accreditation
                 services in English language teaching community all over the
-                world.
+                world. While our roots are deeply grounded in the traditions of
+                British educational excellence, our outlook is inherently
+                global. We believe that we can transform how English is taught
+                and experienced worldwide by setting high standards and fostering
+                a collaborative community.
               </p>
             </div>
 
-            <figure className="ieuk-frame overflow-hidden shadow-[0_12px_28px_rgba(15,23,42,0.08)]">
+            <figure className="ieuk-frame shadow-[0_12px_28px_rgba(15,23,42,0.08)]">
               <ParallaxImage
                 src={images.aboutHero}
                 alt="IEUK community and international educators gathering"
-                className="h-[240px] w-full !bg-transparent object-cover object-center sm:h-[280px] md:h-[320px] lg:h-[380px] xl:h-[420px]"
+                className="h-auto w-full max-w-full object-contain object-center"
                 loading="lazy"
                 decoding="async"
-                strength={10}
+                strength={0}
               />
             </figure>
-          </div>
-
-          <div className="mt-5 border-l-2 border-[#5d1420]/15 pl-4 text-neutral-700">
-            <p>
-              While our roots are deeply grounded in the traditions of British
-              educational excellence, our outlook is inherently global. We
-              believe that we can transform how English is taught and
-              experienced worldwide by setting high standards and fostering a
-              collaborative community.
-            </p>
           </div>
         </section>
 

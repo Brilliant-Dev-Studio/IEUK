@@ -174,7 +174,7 @@ export default function Home() {
           </p>
         </div>
         <Link
-          to="/about"
+          to="/about-us"
           className="ieuk-reveal inline-flex min-h-12 items-center gap-2 rounded-sm bg-[#5a0c16] px-7 text-sm font-bold uppercase tracking-wide text-white shadow-sm transition-[background-color,transform] hover:bg-[#3d0a0f] active:scale-[0.99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5a0c16] [--ieuk-delay:160ms]"
         >
           Explore Information
@@ -428,7 +428,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:justify-center sm:gap-4 lg:justify-start">
               <Link
-                to="/contact"
+                to="/contact-us"
                 className="inline-flex min-h-12 items-center justify-center rounded-sm border-2 border-[#5a0c16]/28 bg-[linear-gradient(rgba(255,255,255,0.85),rgba(255,255,255,0.85)),repeating-linear-gradient(135deg,rgba(90,12,22,0.12)_0,rgba(90,12,22,0.12)_1px,transparent_1px,transparent_10px)] px-7 text-sm font-bold text-[#5a0c16] backdrop-blur-[2px] transition-colors hover:border-[#5a0c16]/45 hover:bg-[linear-gradient(rgba(255,255,255,0.95),rgba(255,255,255,0.95)),repeating-linear-gradient(135deg,rgba(90,12,22,0.14)_0,rgba(90,12,22,0.14)_1px,transparent_1px,transparent_10px)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5a0c16]"
               >
                 Contact Us

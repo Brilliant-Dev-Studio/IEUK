@@ -1,26 +1,87 @@
-import { useCallback, useEffect, useId, useState } from 'react'
+import { useCallback, useEffect, useId, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { ChevronRight } from 'lucide-react'
 import { NavLink } from 'react-router-dom'
 import { images } from '../data/images'
+import { useLenis } from './LenisProvider'
 
 export type NavItem = { to: string; label: string; end?: boolean }
 
 export const navLinks: NavItem[] = [
   { to: '/', label: 'Home', end: true },
-  { to: '/about', label: 'About Us' },
+  { to: '/about-us', label: 'About Us' },
   { to: '/accreditation', label: 'Accreditation' },
   { to: '/membership', label: 'Membership' },
-  { to: '/registry', label: 'IEUK Registry' },
-  { to: '/team', label: 'Our Team' },
-  { to: '/contact', label: 'Contact Us' },
+  { to: '/ieuk-registry', label: 'IEUK Registry' },
+  { to: '/our-team', label: 'Our Team' },
+  { to: '/contact-us', label: 'Contact Us' },
 ]
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [hidden, setHidden] = useState(false)
   const panelId = useId()
+  const lenis = useLenis()
+  const lastYRef = useRef(0)
 
   const closeMenu = useCallback(() => setMenuOpen(false), [])
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    if (menuOpen) return
+
+    const minY = 96
+    const minDelta = 8
+
+    if (lenis) {
+      const onScroll = (l: {
+        scroll?: number
+        actualScroll?: number
+        direction?: number
+      }) => {
+        const y = (l.scroll ?? l.actualScroll ?? 0) as number
+        const lastY = lastYRef.current
+        lastYRef.current = y
+
+        if (y < minY) {
+          setHidden(false)
+          return
+        }
+
+        const delta = y - lastY
+        if (Math.abs(delta) < minDelta) return
+
+        // Lenis sets direction as 1 (down) and -1 (up) in our build.
+        const dir = (l.direction ?? Math.sign(delta)) as number
+        setHidden(dir > 0)
+      }
+
+      lastYRef.current = window.scrollY || 0
+      lenis.on('scroll', onScroll as never)
+      return () => {
+        lenis.off('scroll', onScroll as never)
+      }
+    }
+
+    const onNativeScroll = () => {
+      const y = window.scrollY || 0
+      const lastY = lastYRef.current
+      lastYRef.current = y
+
+      if (y < minY) {
+        setHidden(false)
+        return
+      }
+
+      const delta = y - lastY
+      if (Math.abs(delta) < minDelta) return
+      setHidden(delta > 0)
+    }
+
+    lastYRef.current = window.scrollY || 0
+    window.addEventListener('scroll', onNativeScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onNativeScroll)
+  }, [lenis, menuOpen])
 
   useEffect(() => {
     if (!menuOpen) return
@@ -112,13 +173,34 @@ export default function Header() {
     <>
     <header
       className={[
-        'sticky top-0 border-b border-neutral-200 bg-white',
+        'sticky top-0 border-b-[3px] border-[#5a0c16] bg-gradient-to-b from-[#0B2F73] to-[#061d45] shadow-[0_2px_12px_rgba(6,29,69,0.35)]',
+        'transform-gpu transition-transform duration-300 ease-out will-change-transform',
+        hidden && !menuOpen ? '-translate-y-full' : 'translate-y-0',
         menuOpen ? 'z-[120]' : 'z-30',
       ].join(' ')}
     >
       <div className="flex h-[84px] w-full items-center justify-between px-4 sm:px-5 md:px-10 lg:px-[50px]">
-        <NavLink to="/" className="flex shrink-0 items-center gap-2 outline-offset-4" onClick={closeMenu}>
-          <img src={images.logo} alt="IEUK Logo" className="w-[150px]" />
+        <NavLink
+          to="/"
+          className="flex shrink-0 items-center gap-2 outline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/80"
+          onClick={closeMenu}
+        >
+          <span
+            className={[
+              'inline-flex items-center',
+              'rounded-tl-2xl rounded-tr-lg rounded-br-2xl rounded-bl-lg',
+              'border border-[#5a0c16]/12',
+              'bg-gradient-to-b from-white via-white to-neutral-50/95',
+              'px-2 py-1 sm:px-2.5 sm:py-1.5',
+              'shadow-[0_4px_18px_-4px_rgba(6,29,69,0.28),0_1px_0_rgba(255,255,255,0.85)_inset]',
+            ].join(' ')}
+          >
+            <img
+              src={images.logoHeader}
+              alt="IEUK Logo"
+              className="h-[48px] w-auto max-w-[min(100%,210px)] object-contain object-left sm:h-[54px]"
+            />
+          </span>
         </NavLink>
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Main">
@@ -130,7 +212,9 @@ export default function Header() {
               className={({ isActive }) =>
                 [
                   'text-sm font-medium tracking-wide transition-colors duration-200',
-                  isActive ? 'text-neutral-900' : 'text-neutral-600 hover:text-neutral-900',
+                  isActive
+                    ? 'text-white underline decoration-white/70 underline-offset-[10px]'
+                    : 'text-white/88 hover:text-white',
                 ].join(' ')
               }
             >
@@ -141,7 +225,7 @@ export default function Header() {
 
         <button
           type="button"
-          className="relative z-50 flex h-11 w-11 shrink-0 flex-col items-center justify-center text-neutral-800 lg:hidden focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-400"
+          className="relative z-50 flex h-11 w-11 shrink-0 flex-col items-center justify-center text-white lg:hidden focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/80"
           aria-expanded={menuOpen}
           aria-controls={panelId}
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
