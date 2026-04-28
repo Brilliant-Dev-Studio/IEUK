@@ -21,16 +21,16 @@ export default function Footer() {
         <div className="overflow-hidden rounded-none sm:rounded-2xl">
           <div className="grid gap-8 lg:grid-cols-12 lg:items-start lg:gap-10">
             <div className="lg:col-span-5">
-              <img
-                src={images.logo}
-                alt="IEUK Logo"
-                className="mx-auto mb-4 hidden w-[150px] rounded bg-white p-2 shadow-sm sm:block lg:mx-0"
-                loading="lazy"
-                decoding="async"
-              />
               <p className="mb-3 text-center text-xs font-semibold uppercase tracking-[0.2em] text-white/80 lg:text-left">
                 International English UK
               </p>
+              <img
+                src={images.logo}
+                alt="IEUK Logo"
+                className="mx-auto mb-4 w-[104px] rounded bg-white p-1.5 shadow-sm sm:w-[120px] lg:mx-0"
+                loading="lazy"
+                decoding="async"
+              />
               <p className="text-center text-sm leading-relaxed text-white/85 lg:text-left">
                 Committed to quality, empowering educators, and inspiring
                 learners worldwide.
@@ -38,10 +38,10 @@ export default function Footer() {
             </div>
 
             <div className="lg:col-span-7">
-              <p className="mb-3 hidden text-center text-xs font-bold uppercase tracking-[0.18em] text-white/85 sm:block lg:text-left">
+              <p className="mb-3 text-left text-xs font-bold uppercase tracking-[0.18em] text-white/85">
                 Quick Links
               </p>
-              <div className="grid grid-flow-col grid-cols-2 grid-rows-4 gap-x-10 gap-y-2 text-sm">
+              <div className="grid grid-flow-col grid-cols-2 grid-rows-4 justify-items-start gap-x-10 gap-y-2 text-sm">
                 {navLinks.map(({ to, label }) => (
                   <Link
                     key={to}
