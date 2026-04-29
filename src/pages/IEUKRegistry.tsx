@@ -246,7 +246,7 @@ export default function IEUKRegistry() {
       </section>
 
       <section className="ieuk-reveal mt-10 space-y-5 [--ieuk-delay:200ms]">
-        <div className="grid min-w-0 gap-4 lg:grid-cols-2">
+        <div className="grid min-w-0 items-start gap-4 lg:grid-cols-2">
           {accreditedRegions.map(({ title, items }) => (
             <section
               key={title}
@@ -254,7 +254,7 @@ export default function IEUKRegistry() {
             >
               <p className="mb-3 font-semibold text-neutral-950">{title}</p>
               <div
-                className="ieuk-registry-table-scroll w-full min-w-0 -mx-1 overflow-x-auto overscroll-x-contain overscroll-y-auto px-0 pb-1 [-webkit-overflow-scrolling:touch] max-md:[scrollbar-gutter:auto] md:[scrollbar-gutter:stable] sm:mx-0"
+                className="ieuk-registry-table-scroll w-full min-w-0 -mx-1 overflow-x-auto overscroll-x-contain overscroll-y-auto px-0 max-md:pb-1 md:pb-0 [-webkit-overflow-scrolling:touch] [scrollbar-gutter:auto] sm:mx-0"
                 data-lenis-prevent
                 role="region"
                 aria-label={`${title} accredited centres`}
