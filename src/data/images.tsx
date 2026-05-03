@@ -8,8 +8,11 @@ import aboutMission from '../assets/2. About Us Page Photos/3 About Us.png'
 import accreditationHero from '../assets/3. Accreditation Page Photos/1 Accreditation Page.png'
 import accreditationJourney from '../assets/3. Accreditation Page Photos/2 Accreditation Page.png'
 import accreditationBenchmark from '../assets/3. Accreditation Page Photos/3 Accreditation Page.png'
+import accreditationAccreditedLogo from '../assets/IEUK_Accredited_Logo-removebg-preview.png'
 import membershipHero from '../assets/4. Membership Page Photos/1 Membership Page.png'
 import membershipTiers from '../assets/4. Membership Page Photos/2 Membership Page.png'
+import membershipMemberSeal from '../assets/Photo_1-removebg-preview.png'
+import membershipPolicyOffice from '../assets/Photo 2.png'
 import ourTeamExecutive from '../assets/6. Our Team Page Photos/1 Our Team Page.jpg'
 import ourTeamLinguistic from '../assets/6. Our Team Page Photos/2 Our Team Page.jpg'
 import ourTeamCreative from '../assets/6. Our Team Page Photos/3 Our Team Page.jpg'
@@ -37,10 +40,16 @@ export const images = {
   accreditationJourney,
   /** Standards & QA benchmark */
   accreditationBenchmark,
+  /** Accreditation — IEUK Accredited seal for display by accredited institutions */
+  accreditationAccreditedLogo,
   /** Membership — professional network and benefits */
   membershipHero,
   /** Membership — tiers and member categories */
   membershipTiers,
+  /** Membership — IEUK Member seal for approved marketing use */
+  membershipMemberSeal,
+  /** Membership — IEUK office and team after membership policy */
+  membershipPolicyOffice,
   /** Our Team — executive representatives */
   ourTeamExecutive,
   /** Our Team — linguistic representatives */

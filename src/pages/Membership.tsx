@@ -243,7 +243,406 @@ export default function Membership() {
             </div>
           </div>
 
-          <figure className="ieuk-frame overflow-hidden shadow-[0_12px_28px_rgba(15,23,42,0.08)]">
+          <section
+            className="ieuk-reveal mt-8 space-y-8 text-sm leading-relaxed text-neutral-700 [--ieuk-delay:220ms]"
+            aria-labelledby="membership-policy-heading"
+          >
+            <div className="space-y-2">
+              <h3
+                id="membership-policy-heading"
+                className="text-lg font-semibold tracking-tight text-neutral-950"
+              >
+                IEUK Membership Policy
+              </h3>
+              <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
+            </div>
+
+            <section aria-labelledby="membership-policy-admission">
+              <h4
+                id="membership-policy-admission"
+                className="flex items-baseline gap-2 text-base font-semibold tracking-tight text-neutral-950"
+              >
+                <span className="shrink-0 text-[#5d1420]" aria-hidden>
+                  ◆
+                </span>
+                Admission Requirements
+              </h4>
+              <p className="mt-2">
+                To qualify for membership, applicants must provide:
+              </p>
+              <ul className="mt-3 list-disc space-y-2 pl-5 marker:text-neutral-950/60">
+                <li>
+                  <span className="font-semibold text-neutral-950">
+                    Evidence of Status:
+                  </span>{' '}
+                  Proof of legal registration as an educational or professional
+                  entity.
+                </li>
+                <li>
+                  <span className="font-semibold text-neutral-950">
+                    Quality Commitment:
+                  </span>{' '}
+                  A signed statement agreeing to uphold IEUK Code of Practice.
+                </li>
+                <li>
+                  <span className="font-semibold text-neutral-950">
+                    Reference Checks:
+                  </span>{' '}
+                  At least two professional references from within English Language
+                  Teaching (ELT) sector.
+                </li>
+              </ul>
+            </section>
+
+            <section aria-labelledby="membership-policy-standards">
+              <h4
+                id="membership-policy-standards"
+                className="flex items-baseline gap-2 text-base font-semibold tracking-tight text-neutral-950"
+              >
+                <span className="shrink-0 text-[#5d1420]" aria-hidden>
+                  ◆
+                </span>
+                Core Standards &amp; Quality Assurance
+              </h4>
+              <p className="mt-2">
+                All members must adhere to the following pillars:
+              </p>
+              <ul className="mt-3 list-disc space-y-2 pl-5 marker:text-neutral-950/60">
+                <li>
+                  <span className="font-semibold text-neutral-950">
+                    Management &amp; Administration:
+                  </span>{' '}
+                  Transparent governance and ethical business practices.
+                </li>
+                <li>
+                  <span className="font-semibold text-neutral-950">
+                    Teaching &amp; Learning:
+                  </span>{' '}
+                  Curriculums must meet international frameworks (CEFR).
+                </li>
+                <li>
+                  <span className="font-semibold text-neutral-950">
+                    Student Welfare:
+                  </span>{' '}
+                  Safe environments and clear grievance procedures for all learners.
+                </li>
+                <li>
+                  <span className="font-semibold text-neutral-950">
+                    Professionalism:
+                  </span>{' '}
+                  Staff must hold recognized qualifications for their respective roles.
+                </li>
+              </ul>
+            </section>
+
+            <section aria-labelledby="membership-policy-rights">
+              <h4
+                id="membership-policy-rights"
+                className="flex items-baseline gap-2 text-base font-semibold tracking-tight text-neutral-950"
+              >
+                <span className="shrink-0 text-[#5d1420]" aria-hidden>
+                  ◆
+                </span>
+                Rights and Benefits
+              </h4>
+              <div className="mt-3 grid grid-cols-1 items-start gap-8 md:grid-cols-[minmax(0,1fr)_220px] md:gap-10 lg:grid-cols-[minmax(0,1fr)_260px]">
+                <ul className="list-disc space-y-2 pl-5 marker:text-neutral-950/60">
+                  <li>
+                    <span className="font-semibold text-neutral-950">
+                      IEUK Member Logo:
+                    </span>{' '}
+                    IEUK affiliated members may display our seal or logo &quot;IEUK
+                    Member&quot; on marketing materials to signify quality.
+                  </li>
+                  <li>
+                    <span className="font-semibold text-neutral-950">
+                      Global Networking:
+                    </span>{' '}
+                    Access to members-only forums, webinars, and international
+                    conferences.
+                  </li>
+                  <li>
+                    <span className="font-semibold text-neutral-950">
+                      Professional Development:
+                    </span>{' '}
+                    Discounted rates for IEUK-led training and certification programs.
+                  </li>
+                  <li>
+                    <span className="font-semibold text-neutral-950">Advocacy:</span>{' '}
+                    Representation in global discussions regarding language education
+                    policy.
+                  </li>
+                </ul>
+                <div className="mx-auto w-full max-w-[240px] md:mx-0 md:max-w-none md:justify-self-end">
+                  <img
+                    src={images.membershipMemberSeal}
+                    alt="IEUK Member gold seal — official mark for approved marketing use"
+                    width={240}
+                    height={240}
+                    className="h-auto w-full object-contain"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+            </section>
+
+            <section aria-labelledby="membership-policy-termination">
+              <h4
+                id="membership-policy-termination"
+                className="flex items-baseline gap-2 text-base font-semibold tracking-tight text-neutral-950"
+              >
+                <span className="shrink-0 text-[#5d1420]" aria-hidden>
+                  ◆
+                </span>
+                Termination of Membership
+              </h4>
+              <p className="mt-2">
+                Membership may be suspended or revoked if a member:
+              </p>
+              <ul className="mt-3 list-disc space-y-2 pl-5 marker:text-neutral-950/60">
+                <li>
+                  Fails to maintain the required quality standards during a
+                  re-inspection.
+                </li>
+                <li>Engages in unethical marketing or fraudulent activities.</li>
+                <li>
+                  Fails to pay annual membership dues within 60 days of the invoice
+                  date.
+                </li>
+              </ul>
+            </section>
+
+            <figure className="ieuk-frame mt-8 overflow-hidden shadow-[0_12px_28px_rgba(15,23,42,0.08)]">
+              <ParallaxImage
+                src={images.membershipPolicyOffice}
+                alt="IEUK office — team working with IEUK branding and modern workspace"
+                className="w-full h-auto"
+                loading="lazy"
+                decoding="async"
+                strength={0}
+              />
+            </figure>
+          </section>
+
+          <section
+            className="ieuk-reveal mt-10 space-y-8 text-sm leading-relaxed text-neutral-700 [--ieuk-delay:240ms]"
+            aria-labelledby="code-of-ethics-heading"
+          >
+            <div className="space-y-2">
+              <h3
+                id="code-of-ethics-heading"
+                className="text-lg font-semibold tracking-tight text-neutral-950"
+              >
+                IEUK International Code of Ethics
+              </h3>
+              <div className="h-px w-12 bg-[#5d1420]/25" aria-hidden />
+            </div>
+
+            <section aria-labelledby="code-ethics-part1">
+              <h4
+                id="code-ethics-part1"
+                className="flex items-baseline gap-2 text-base font-semibold tracking-tight text-neutral-950"
+              >
+                <span className="shrink-0 text-[#5d1420]" aria-hidden>
+                  ◆
+                </span>
+                Part 1: Professional Code of Conduct
+              </h4>
+              <p className="mt-2">
+                IEUK focuses on the character and ethical behavior of the institution
+                and its staff:
+              </p>
+              <div className="mt-5 space-y-6">
+                <div>
+                  <p className="font-semibold text-neutral-950">
+                    1. Integrity and Transparency
+                  </p>
+                  <ul className="mt-2 list-disc space-y-2 pl-5 marker:text-neutral-950/60">
+                    <li>
+                      <span className="font-semibold text-neutral-950">
+                        Honest Marketing:
+                      </span>{' '}
+                      All promotional materials must be accurate and not to mislead
+                      students regarding course outcomes, costs, or visa success rates.
+                    </li>
+                    <li>
+                      <span className="font-semibold text-neutral-950">
+                        Conflict of Interest:
+                      </span>{' '}
+                      All IEUK members must disclose any relationships that could
+                      compromise the impartiality of student assessments or business
+                      dealings.
+                    </li>
+                    <li>
+                      <span className="font-semibold text-neutral-950">
+                        Financial Probity:
+                      </span>{' '}
+                      Maintain clear financial records and provide students with
+                      transparent refund and cancellation policies.
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="font-semibold text-neutral-950">2. Mutual Respect</p>
+                  <ul className="mt-2 list-disc space-y-2 pl-5 marker:text-neutral-950/60">
+                    <li>
+                      <span className="font-semibold text-neutral-950">
+                        Non-Discrimination:
+                      </span>{' '}
+                      Foster an environment free from harassment, bullying, and
+                      discrimination.
+                    </li>
+                    <li>
+                      <span className="font-semibold text-neutral-950">
+                        Professionalism:
+                      </span>{' '}
+                      Staff must interact with students and colleagues with the highest
+                      level of courtesy and professional boundaries.
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="font-semibold text-neutral-950">3. Compliance</p>
+                  <ul className="mt-2 list-disc space-y-2 pl-5 marker:text-neutral-950/60">
+                    <li>
+                      <span className="font-semibold text-neutral-950">Local Laws:</span>{' '}
+                      Abide by all national regulations, including labor laws, data
+                      protection, and health and safety requirements.
+                    </li>
+                    <li>
+                      <span className="font-semibold text-neutral-950">Brand Usage:</span>{' '}
+                      Use &quot;IEUK Member&quot; logo only as permitted and immediately
+                      ceases use if membership is suspended or terminated.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section aria-labelledby="code-ethics-part2">
+              <h4
+                id="code-ethics-part2"
+                className="flex items-baseline gap-2 text-base font-semibold tracking-tight text-neutral-950"
+              >
+                <span className="shrink-0 text-[#5d1420]" aria-hidden>
+                  ◆
+                </span>
+                Part 2: Code of Practice
+              </h4>
+              <p className="mt-2">
+                IEUK focuses on the operational standards for delivering quality
+                education:
+              </p>
+              <div className="mt-5 space-y-6">
+                <div>
+                  <p className="font-semibold text-neutral-950">
+                    1. Teaching and Learning
+                  </p>
+                  <ul className="mt-2 list-disc space-y-2 pl-5 marker:text-neutral-950/60">
+                    <li>
+                      <span className="font-semibold text-neutral-950">
+                        Qualified Staff:
+                      </span>{' '}
+                      Teachers must hold a minimum recognized qualification (e.g.,
+                      CELTA, Trinity CertTESOL, or equivalent to any relevant degree in
+                      education).
+                    </li>
+                    <li>
+                      <span className="font-semibold text-neutral-950">
+                        Syllabus Standards:
+                      </span>{' '}
+                      Courses must be mapped to CEFR (Common European Framework of
+                      Reference for Languages).
+                    </li>
+                    <li>
+                      <span className="font-semibold text-neutral-950">
+                        Assessment Integrity:
+                      </span>{' '}
+                      Implement rigorous, secure testing protocols to ensure certificates
+                      accurately reflect a student&apos;s proficiency.
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="font-semibold text-neutral-950">
+                    2. Student Support and Welfare
+                  </p>
+                  <ul className="mt-2 list-disc space-y-2 pl-5 marker:text-neutral-950/60">
+                    <li>
+                      <span className="font-semibold text-neutral-950">Induction:</span>{' '}
+                      Provide every student with a comprehensive orientation regarding
+                      their course, school rules, and local emergency procedures.
+                    </li>
+                    <li>
+                      <span className="font-semibold text-neutral-950">
+                        Feedback Loops:
+                      </span>{' '}
+                      Maintain a formal system for gathering student feedback and a
+                      clear, documented grievance procedure for complaints.
+                    </li>
+                    <li>
+                      <span className="font-semibold text-neutral-950">Safeguarding:</span>{' '}
+                      For institutions enrolling minors (under 18), a robust Child
+                      Protection Policy and background checks for all staff are mandatory.
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="font-semibold text-neutral-950">
+                    3. Continuous Improvement
+                  </p>
+                  <ul className="mt-2 list-disc space-y-2 pl-5 marker:text-neutral-950/60">
+                    <li>
+                      <span className="font-semibold text-neutral-950">
+                        Staff Development:
+                      </span>{' '}
+                      Provide teachers with at least 10 hours of CPD (Continuous
+                      Professional Development) annually.
+                    </li>
+                    <li>
+                      <span className="font-semibold text-neutral-950">Resources:</span>{' '}
+                      Regularly update learning materials, digital libraries, and
+                      classroom technology to meet modern educational standards.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section aria-labelledby="code-ethics-part3">
+              <h4
+                id="code-ethics-part3"
+                className="flex items-baseline gap-2 text-base font-semibold tracking-tight text-neutral-950"
+              >
+                <span className="shrink-0 text-[#5d1420]" aria-hidden>
+                  ◆
+                </span>
+                Part 3: Monitoring and Enforcement
+              </h4>
+              <ul className="mt-3 list-disc space-y-2 pl-5 marker:text-neutral-950/60">
+                <li>
+                  <span className="font-semibold text-neutral-950">
+                    Self-Assessment:
+                  </span>{' '}
+                  All IEUK members must submit an annual &quot;Statement of
+                  Compliance.&quot;
+                </li>
+                <li>
+                  <span className="font-semibold text-neutral-950">Spot Checks:</span>{' '}
+                  IEUK reserves the right to conduct unannounced virtual or physical
+                  inspections if a breach is reported.
+                </li>
+                <li>
+                  <span className="font-semibold text-neutral-950">Sanctions:</span>{' '}
+                  Minor breaches result in a &quot;Notice to Improve.&quot; Serious or
+                  repeated violations lead to immediate membership revocation.
+                </li>
+              </ul>
+            </section>
+          </section>
+
+          <figure className="ieuk-frame mt-8 overflow-hidden shadow-[0_12px_28px_rgba(15,23,42,0.08)]">
             <ParallaxImage
               src={images.membershipTiers}
               alt="Membership tiers overview table"

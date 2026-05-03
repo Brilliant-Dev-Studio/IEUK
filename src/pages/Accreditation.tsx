@@ -132,10 +132,9 @@ export default function Accreditation() {
       </section>
 
       <section
-        className={`${card} mt-10 space-y-5 lg:grid lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-10 lg:space-y-0 [--ieuk-delay:200ms]`}
+        className={`${card} mt-10 space-y-5 lg:grid lg:grid-cols-[1fr_1fr] lg:items-stretch lg:gap-10 lg:space-y-0 [--ieuk-delay:200ms]`}
       >
-        <div className="space-y-3 lg:col-start-2 lg:row-start-1">
-        
+        <div className="space-y-3 self-start lg:col-start-2 lg:row-start-1">
           <h3 className="text-lg font-semibold tracking-tight text-neutral-950">
             IEUK Accreditation Journey
           </h3>
@@ -149,18 +148,31 @@ export default function Accreditation() {
           </p>
         </div>
 
-        <figure className="ieuk-frame overflow-hidden shadow-[0_12px_40px_rgba(90,12,22,0.10)] lg:col-start-1 lg:row-span-3 lg:mt-1 lg:justify-self-center">
-          <ParallaxImage
-            src={images.accreditationJourney}
-            alt="Map of the IEUK accreditation process steps"
-            className="w-full h-auto"
-            loading="lazy"
-            decoding="async"
-            strength={8}
-          />
-        </figure>
+        <div className="flex h-full min-h-0 w-full flex-col gap-6 lg:col-start-1 lg:row-span-3 lg:mt-1 lg:justify-self-center lg:self-stretch">
+          <figure className="shrink-0 ieuk-frame overflow-hidden shadow-[0_12px_40px_rgba(90,12,22,0.10)]">
+            <ParallaxImage
+              src={images.accreditationJourney}
+              alt="Map of the IEUK accreditation process steps"
+              className="w-full h-auto"
+              loading="lazy"
+              decoding="async"
+              strength={8}
+            />
+          </figure>
+          <div className="flex min-h-0 flex-1 flex-col items-center justify-center">
+            <img
+              src={images.accreditationAccreditedLogo}
+              alt="IEUK Accredited official seal — mark for institutions awarded IEUK accreditation"
+              width={280}
+              height={280}
+              className="h-auto w-full max-w-[260px] object-contain sm:max-w-[300px] lg:max-w-[320px]"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
 
-        <ol className="space-y-4 text-neutral-700 lg:col-start-2 lg:row-start-2">
+        <ol className="space-y-4 self-start text-neutral-700 lg:col-start-2 lg:row-start-2">
           {(
             [
               {
@@ -208,7 +220,7 @@ export default function Accreditation() {
           ))}
         </ol>
 
-        <div className="space-y-4 text-neutral-700 lg:col-start-2 lg:row-start-3">
+        <div className="space-y-4 self-start text-neutral-700 lg:col-start-2 lg:row-start-3">
           <p className="text-sm leading-relaxed text-neutral-700">
             Quality assurance is the foundation of IEUK. Through our transparent,
             evidence-based accreditation process, we evaluate institutions on their
