@@ -336,17 +336,17 @@ export default function Membership() {
             </section>
 
             <section aria-labelledby="membership-policy-rights">
-              <h4
-                id="membership-policy-rights"
-                className="flex items-baseline gap-2 text-base font-semibold tracking-tight text-neutral-950"
-              >
-                <span className="shrink-0 text-[#5d1420]" aria-hidden>
-                  ◆
-                </span>
-                Rights and Benefits
-              </h4>
-              <div className="mt-3 grid grid-cols-1 items-start gap-8 md:grid-cols-[minmax(0,1fr)_220px] md:gap-10 lg:grid-cols-[minmax(0,1fr)_260px]">
-                <ul className="list-disc space-y-2 pl-5 marker:text-neutral-950/60">
+              <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_220px] md:gap-x-10 md:gap-y-3 lg:grid-cols-[minmax(0,1fr)_260px]">
+                <h4
+                  id="membership-policy-rights"
+                  className="flex items-center gap-2 text-base font-semibold tracking-tight text-neutral-950 md:col-start-1 md:row-start-1"
+                >
+                  <span className="shrink-0 text-[#5d1420]" aria-hidden>
+                    ◆
+                  </span>
+                  Rights and Benefits
+                </h4>
+                <ul className="mt-3 list-disc space-y-2 pl-5 marker:text-neutral-950/60 md:col-start-1 md:row-start-2 md:mt-0">
                   <li>
                     <span className="font-semibold text-neutral-950">
                       IEUK Member Logo:
@@ -373,7 +373,7 @@ export default function Membership() {
                     policy.
                   </li>
                 </ul>
-                <div className="mx-auto w-full max-w-[240px] md:mx-0 md:max-w-none md:justify-self-end">
+                <div className="mx-auto mt-8 w-full max-w-[240px] md:col-start-2 md:row-start-1 md:row-span-2 md:mx-0 md:mt-0 md:flex md:h-full md:max-w-none md:min-h-0 md:items-center md:justify-end md:justify-self-end">
                   <img
                     src={images.membershipMemberSeal}
                     alt="IEUK Member gold seal — official mark for approved marketing use"

@@ -159,16 +159,21 @@ export default function Accreditation() {
               strength={8}
             />
           </figure>
-          <div className="flex min-h-0 flex-1 flex-col items-center justify-center">
-            <img
-              src={images.accreditationAccreditedLogo}
-              alt="IEUK Accredited official seal — mark for institutions awarded IEUK accreditation"
-              width={280}
-              height={280}
-              className="h-auto w-full max-w-[260px] object-contain sm:max-w-[300px] lg:max-w-[320px]"
-              loading="lazy"
-              decoding="async"
-            />
+          <div className="space-y-4 text-neutral-700">
+            <p className="text-sm leading-relaxed text-neutral-700">
+              Quality assurance is the foundation of IEUK. Through our transparent,
+              evidence-based accreditation process, we evaluate institutions on their
+              curriculum, faculty expertise, student support systems, and operational
+              standards.
+            </p>
+            <p className="text-sm leading-relaxed text-neutral-700">
+              When an institution earns accreditation from IEUK, they are not just
+              receiving a certificate; they are joining a select group of providers
+              committed to the highest level of academic rigor. We provide the
+              oversight necessary to maintain confidence in the English language
+              training sector, ensuring that every learner experiences the best of
+              British-inspired education.
+            </p>
           </div>
         </div>
 
@@ -220,21 +225,16 @@ export default function Accreditation() {
           ))}
         </ol>
 
-        <div className="space-y-4 self-start text-neutral-700 lg:col-start-2 lg:row-start-3">
-          <p className="text-sm leading-relaxed text-neutral-700">
-            Quality assurance is the foundation of IEUK. Through our transparent,
-            evidence-based accreditation process, we evaluate institutions on their
-            curriculum, faculty expertise, student support systems, and operational
-            standards.
-          </p>
-          <p className="text-sm leading-relaxed text-neutral-700">
-            When an institution earns accreditation from IEUK, they are not just
-            receiving a certificate; they are joining a select group of providers
-            committed to the highest level of academic rigor. We provide the
-            oversight necessary to maintain confidence in the English language
-            training sector, ensuring that every learner experiences the best of
-            British-inspired education.
-          </p>
+        <div className="flex flex-col items-center justify-center self-start lg:col-start-2 lg:row-start-3">
+          <img
+            src={images.accreditationAccreditedLogo}
+            alt="IEUK Accredited official seal — mark for institutions awarded IEUK accreditation"
+            width={280}
+            height={280}
+            className="h-auto w-full max-w-[260px] object-contain sm:max-w-[300px] lg:max-w-[320px]"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </section>
 
@@ -399,9 +399,11 @@ export default function Accreditation() {
           <div className="h-px w-12 bg-[#5a0c16]/25" aria-hidden />
         </div>
 
-        <p className="max-w-prose text-neutral-700">
-        We utilize a multi-stage approach to ensure these standards are not just written on paper, but practiced every day.
-        </p>
+        <div className="overflow-x-auto">
+          <p className="whitespace-nowrap text-neutral-700">
+            We utilize a multi-stage approach to ensure these standards are not just written on paper, but practiced every day.
+          </p>
+        </div>
 
         <ul className="grid gap-3 pt-2 sm:grid-cols-3">
           {(
