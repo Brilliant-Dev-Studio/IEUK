@@ -132,98 +132,99 @@ export default function Accreditation() {
       </section>
 
       <section
-        className={`${card} mt-10 space-y-5 lg:grid lg:grid-cols-[1fr_1fr] lg:items-stretch lg:gap-10 lg:space-y-0 [--ieuk-delay:200ms]`}
+        className={`${card} mt-10 space-y-5 lg:grid lg:grid-cols-[1fr_1fr] lg:gap-10 lg:space-y-0 [--ieuk-delay:200ms]`}
       >
-        <div className="space-y-3 self-start lg:col-start-2 lg:row-start-1">
-          <h3 className="text-lg font-semibold tracking-tight text-neutral-950">
-            IEUK Accreditation Journey
-          </h3>
-          <div className="h-px w-12 bg-[#5a0c16]/25" aria-hidden />
-          <p className="text-neutral-700">
-            Achieving IEUK accreditation is a testament to an institution&apos;s
-            commitment to quality. Our process is designed to be transparent,
-            thorough, and supportive and a collaborative peer-review experience.
-            We support institutions as they demonstrate their commitment to
-            excellence.
-          </p>
-        </div>
-
-        <div className="flex h-full min-h-0 w-full flex-col gap-6 lg:col-start-1 lg:row-span-3 lg:mt-1 lg:justify-self-center lg:self-stretch">
-          <figure className="shrink-0 ieuk-frame overflow-hidden shadow-[0_12px_40px_rgba(90,12,22,0.10)]">
-            <ParallaxImage
-              src={images.accreditationJourney}
-              alt="Map of the IEUK accreditation process steps"
-              className="w-full h-auto"
-              loading="lazy"
-              decoding="async"
-              strength={8}
-            />
-          </figure>
-          <div className="space-y-4 text-neutral-700">
-            <p className="text-sm leading-relaxed text-neutral-700">
-              Quality assurance is the foundation of IEUK. Through our transparent,
-              evidence-based accreditation process, we evaluate institutions on their
-              curriculum, faculty expertise, student support systems, and operational
-              standards.
-            </p>
-            <p className="text-sm leading-relaxed text-neutral-700">
-              When an institution earns accreditation from IEUK, they are not just
-              receiving a certificate; they are joining a select group of providers
-              committed to the highest level of academic rigor. We provide the
-              oversight necessary to maintain confidence in the English language
-              training sector, ensuring that every learner experiences the best of
-              British-inspired education.
+        <div className="space-y-5 self-start text-neutral-700 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:flex lg:flex-col lg:justify-center">
+          <div className="space-y-3">
+            <h3 className="text-lg font-semibold tracking-tight text-neutral-950">
+              IEUK Accreditation Journey
+            </h3>
+            <div className="h-px w-12 bg-[#5a0c16]/25" aria-hidden />
+            <p className="text-neutral-700">
+              Achieving IEUK accreditation is a testament to an institution&apos;s
+              commitment to quality. Our process is designed to be transparent,
+              thorough, and supportive and a collaborative peer-review experience.
+              We support institutions as they demonstrate their commitment to
+              excellence.
             </p>
           </div>
+
+          <ol className="space-y-4">
+            {(
+              [
+                {
+                  title: "Inquiry & Application",
+                  body: "Institutions submit an initial profile to determine eligibility.",
+                },
+                {
+                  title: "Self-Assessment Report",
+                  body: "A comprehensive internal study where the institution evaluates its own performance against IEUK standards.",
+                },
+                {
+                  title: "Peer Review (On-Site or Virtual Visit)",
+                  body: "A team of independent experts conducts an objective evaluation, including interviews with staff, faculty, and students.",
+                },
+                {
+                  title: "Quality Panel Review",
+                  body: "An independent panel reviews the findings and makes an impartial recommendation.",
+                },
+                {
+                  title: "Status Awarded",
+                  body: 'Successful institutions are granted IEUK accreditation and the right to display our seal of logo "IEUK Accredited".',
+                },
+              ] as const
+            ).map(({ title, body }, idx, arr) => (
+              <li key={title} className="relative pl-12">
+                {idx !== arr.length - 1 && (
+                  <span
+                    className="absolute left-[18px] top-9 h-[calc(100%-18px)] w-px bg-[#5a0c16]/18"
+                    aria-hidden
+                  />
+                )}
+                <span
+                  className="absolute left-0 top-0 flex h-9 w-9 items-center justify-center rounded-full bg-[#5a0c16] text-sm font-bold text-white shadow-sm"
+                  aria-hidden
+                >
+                  {idx + 1}
+                </span>
+                <p className="font-semibold text-neutral-950">
+                  Step {idx + 1}: {title}
+                </p>
+                <p className="mt-1 text-sm leading-relaxed text-neutral-700">
+                  {body}
+                </p>
+              </li>
+            ))}
+          </ol>
         </div>
 
-        <ol className="space-y-4 self-start text-neutral-700 lg:col-start-2 lg:row-start-2">
-          {(
-            [
-              {
-                title: "Inquiry & Application",
-                body: "Institutions submit an initial profile to determine eligibility.",
-              },
-              {
-                title: "Self-Assessment Report",
-                body: "A comprehensive internal study where the institution evaluates its own performance against IEUK standards.",
-              },
-              {
-                title: "Peer Review (On-Site or Virtual Visit)",
-                body: "A team of independent experts conducts an objective evaluation, including interviews with staff, faculty, and students.",
-              },
-              {
-                title: "Quality Panel Review",
-                body: "An independent panel reviews the findings and makes an impartial recommendation.",
-              },
-              {
-                title: "Status Awarded",
-                body: 'Successful institutions are granted IEUK accreditation and the right to display our seal of logo "IEUK Accredited".',
-              },
-            ] as const
-          ).map(({ title, body }, idx, arr) => (
-            <li key={title} className="relative pl-12">
-              {idx !== arr.length - 1 && (
-                <span
-                  className="absolute left-[18px] top-9 h-[calc(100%-18px)] w-px bg-[#5a0c16]/18"
-                  aria-hidden
-                />
-              )}
-              <span
-                className="absolute left-0 top-0 flex h-9 w-9 items-center justify-center rounded-full bg-[#5a0c16] text-sm font-bold text-white shadow-sm"
-                aria-hidden
-              >
-                {idx + 1}
-              </span>
-              <p className="font-semibold text-neutral-950">
-                Step {idx + 1}: {title}
-              </p>
-              <p className="mt-1 text-sm leading-relaxed text-neutral-700">
-                {body}
-              </p>
-            </li>
-          ))}
-        </ol>
+        <figure className="ieuk-frame overflow-hidden shadow-[0_12px_40px_rgba(90,12,22,0.10)] lg:col-start-1 lg:row-start-1 lg:row-span-2 lg:mt-1 lg:self-center">
+          <ParallaxImage
+            src={images.accreditationJourney}
+            alt="Map of the IEUK accreditation process steps"
+            className="w-full h-auto"
+            loading="lazy"
+            decoding="async"
+            strength={8}
+          />
+        </figure>
+
+        <div className="space-y-4 text-neutral-700 lg:col-start-1 lg:row-start-3">
+          <p className="text-base leading-relaxed text-neutral-700">
+            Quality assurance is the foundation of IEUK. Through our transparent,
+            evidence-based accreditation process, we evaluate institutions on their
+            curriculum, faculty expertise, student support systems, and operational
+            standards.
+          </p>
+          <p className="text-base leading-relaxed text-neutral-700">
+            When an institution earns accreditation from IEUK, they are not just
+            receiving a certificate; they are joining a select group of providers
+            committed to the highest level of academic rigor. We provide the
+            oversight necessary to maintain confidence in the English language
+            training sector, ensuring that every learner experiences the best of
+            British-inspired education.
+          </p>
+        </div>
 
         <div className="flex flex-col items-center justify-center self-start lg:col-start-2 lg:row-start-3">
           <img
@@ -399,8 +400,8 @@ export default function Accreditation() {
           <div className="h-px w-12 bg-[#5a0c16]/25" aria-hidden />
         </div>
 
-        <div className="overflow-x-auto">
-          <p className="whitespace-nowrap text-neutral-700">
+        <div className="text-neutral-700">
+          <p className="whitespace-normal text-neutral-700 md:whitespace-nowrap">
             We utilize a multi-stage approach to ensure these standards are not just written on paper, but practiced every day.
           </p>
         </div>
