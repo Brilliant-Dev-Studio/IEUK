@@ -13,6 +13,7 @@ export const navLinks: NavItem[] = [
   { to: '/accreditation', label: 'Accreditation' },
   { to: '/membership', label: 'Membership' },
   { to: '/ieuk-registry', label: 'IEUK Registry' },
+  { to: '/diploma-program', label: 'Diploma Program' },
   { to: '/our-team', label: 'Our Team' },
   { to: '/contact-us', label: 'Contact Us' },
 ]

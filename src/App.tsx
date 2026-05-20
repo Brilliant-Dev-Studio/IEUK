@@ -5,6 +5,7 @@ import Layout from './components/Layout'
 import AboutUs from './pages/AboutUs'
 import Accreditation from './pages/Accreditation'
 import ContactUs from './pages/ContactUs'
+import DiplomaProgram from './pages/DiplomaProgram'
 import Home from './pages/Home'
 import IEUKRegistry from './pages/IEUKRegistry'
 import Membership from './pages/Membership'
@@ -22,6 +23,8 @@ export default function App() {
             <Route path="our-team" element={<OurTeam />} />
             <Route path="contact-us" element={<ContactUs />} />
             <Route path="ieuk-registry" element={<IEUKRegistry />} />
+            <Route path="diploma-program" element={<DiplomaProgram />} />
+            <Route path="diploma" element={<Navigate to="/diploma-program" replace />} />
             <Route path="about" element={<Navigate to="/about-us" replace />} />
             <Route path="team" element={<Navigate to="/our-team" replace />} />
             <Route path="contact" element={<Navigate to="/contact-us" replace />} />

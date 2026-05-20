@@ -19,6 +19,9 @@ import ourTeamCreative from '../assets/6. Our Team Page Photos/3 Our Team Page.j
 import registryHero from '../assets/5. IEUK Registry Page Photos/1 IEUK Registry Page.png'
 import contactHero from '../assets/7. Contact Us Page Photos/1 Contact Us Page.png'
 import contactFormSectionBg from '../assets/contact-form-section-bg.png'
+import diplomaAcademicIntegrity from '../assets/Diploma Photos/IEUK Academic Integrity.png'
+import diplomaDpec from '../assets/Diploma Photos/IEUK DPEC.png'
+import diplomaPolicy from '../assets/Diploma Photos/IEUK Policy.png'
 
 export const images = {
   logo,
@@ -62,6 +65,12 @@ export const images = {
   contactHero,
   /** Contact — form section (maroon mesh) background */
   contactFormSectionBg,
+  /** Diploma Program — Academic Integrity */
+  diplomaAcademicIntegrity,
+  /** Diploma Program — DPEC */
+  diplomaDpec,
+  /** Diploma Program — Policy */
+  diplomaPolicy,
   /** Teaching & professional development — overlay cards */
   homeSpotlight: homeHero,
 } as const
