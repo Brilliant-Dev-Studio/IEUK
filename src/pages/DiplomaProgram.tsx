@@ -20,8 +20,7 @@ export default function DiplomaProgram() {
           </h2>
           <div className="h-px w-12 bg-[#5a0c16]/25" aria-hidden />
           <p className="max-w-prose text-neutral-700">
-            ​International English UK&rsquo;s accredited institutions can now
-            deliver the comprehensive{' '}
+            ​Accredited institutions can now deliver the comprehensive{' '}
             <strong className="font-semibold text-neutral-950">
               Diploma in Professional English Communication
             </strong>{' '}
@@ -106,9 +105,9 @@ export default function DiplomaProgram() {
           and accreditation process is successfully finalized, we will formally
           notify you that your institute is officially authorized and qualified
           to launch and deliver the diploma program in partnership with IEUK.
-          Upon approval, accredited institutions will be authorized to feature
+          Upon approval, accredited institutions will be permitted to feature
           the official IEUK&rsquo;s logo alongside their own institute&rsquo;s
-          logo on the Diploma certificate.
+          logo on the diploma certificate.
         </p>
       </section>
 
@@ -321,7 +320,7 @@ export default function DiplomaProgram() {
             International English UK maintains a strict stance against any
             unauthorized or misleading marketing to protect the integrity of the
             qualification. It has come to light that certain unaccredited and
-            completely unrelated institutes with IEUK may be deceptively
+            completely unrelated institutes may be deceptively
             advertising or offering the{' '}
             <strong className="font-semibold text-neutral-950">
               Diploma in Professional English Communication
@@ -354,7 +353,7 @@ export default function DiplomaProgram() {
         </div>
 
         <p className="text-neutral-700">
-          ​Unaccredited or unauthorized institutes with IEUK often use deceptive
+          ​Unaccredited or unauthorized institutes often use deceptive
           marketing to attract students. Watch out for these red flags:
         </p>
 
@@ -364,7 +363,14 @@ export default function DiplomaProgram() {
               ​Absence of Verified Partner Status:
             </span>{' '}
             Legitimate partners will always have an active accreditation status
-            directly verifiable through the official IEUK website.
+            directly verifiable through the official IEUK Registry:{' '}
+            <a
+              href="https://www.ieuk.org/ieuk-registry"
+              className="font-semibold text-[#5a0c16] underline decoration-[#5a0c16]/30 underline-offset-4 hover:decoration-[#5a0c16]/60"
+            >
+              https://www.ieuk.org/ieuk-registry
+            </a>
+            .
           </li>
           <li>
             <span className="font-semibold text-neutral-950">
@@ -402,7 +408,7 @@ export default function DiplomaProgram() {
             </span>{' '}
             IEUK strictly evaluates all curricula and textbooks before our
             accredited institute is qualified to teach. If an institute claims
-            they can launch the program immediately without this vetting
+            that they can launch the program immediately without this vetting
             process, they are not officially accredited by IEUK.
           </li>
         </ul>
