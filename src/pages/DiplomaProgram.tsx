@@ -20,17 +20,10 @@ export default function DiplomaProgram() {
           </h2>
           <div className="h-px w-12 bg-[#5a0c16]/25" aria-hidden />
           <p className="max-w-prose text-neutral-700">
-            ​Accredited institutions can now deliver the comprehensive{' '}
-            <strong className="font-semibold text-neutral-950">
-              Diploma in Professional English Communication
-            </strong>{' '}
-            in partnership with{' '}
-            <strong className="font-semibold text-neutral-950">IEUK</strong>. To
-            qualify for this program, institutions must select and deliver{' '}
-            <strong className="font-semibold text-neutral-950">
-              five specialized courses
-            </strong>{' '}
-            from the following core areas:
+            ​Accredited institutions can now deliver the comprehensive Diploma
+            in Professional English Communication in partnership with IEUK. To
+            qualify for this program, institutions must select and deliver five
+            specialized courses from the following core areas:
           </p>
         </div>
 
@@ -129,8 +122,21 @@ export default function DiplomaProgram() {
         </p>
       </section>
 
-      <section className="ieuk-reveal mt-10 space-y-6 py-2 [--ieuk-delay:240ms] lg:grid lg:grid-cols-[1.15fr_1fr] lg:items-center lg:gap-10 lg:space-y-0">
-        <figure className="ieuk-frame overflow-hidden bg-white shadow-[0_12px_40px_rgba(90,12,22,0.10)] lg:order-1 lg:justify-self-start">
+      <section className="ieuk-reveal mt-10 space-y-6 py-2 [--ieuk-delay:240ms] lg:grid lg:grid-cols-[1fr_1.15fr] lg:items-center lg:gap-10 lg:space-y-0">
+        <div className="space-y-4">
+          <h3 className="text-lg font-semibold tracking-tight text-neutral-950">
+            ​IEUK Academic Integrity Policy
+          </h3>
+          <div className="h-px w-12 bg-[#5a0c16]/25" aria-hidden />
+          <p className="max-w-prose text-neutral-700">
+            International English UK and its accredited partner institutes
+            follow a clear policy on Academic Integrity ensures that the
+            qualification maintains its high international standards, prestige,
+            and credibility to meet high expectation to students and faculty.
+          </p>
+        </div>
+
+        <figure className="ieuk-frame overflow-hidden bg-white shadow-[0_12px_40px_rgba(90,12,22,0.10)] lg:justify-self-end">
           <ParallaxImage
             src={images.diplomaAcademicIntegrity}
             alt="IEUK Academic Integrity Policy"
@@ -140,23 +146,6 @@ export default function DiplomaProgram() {
             strength={0}
           />
         </figure>
-
-        <div className="space-y-4 lg:order-2">
-          <h3 className="text-lg font-semibold tracking-tight text-neutral-950">
-            ​IEUK Academic Integrity Policy
-          </h3>
-          <div className="h-px w-12 bg-[#5a0c16]/25" aria-hidden />
-          <p className="max-w-prose text-neutral-700">
-            International English UK and its accredited partner institutes
-            follow a clear policy on{' '}
-            <strong className="font-semibold text-neutral-950">
-              Academic Integrity
-            </strong>{' '}
-            ensures that the qualification maintains its high international
-            standards, prestige, and credibility to meet high expectation to
-            students and faculty.
-          </p>
-        </div>
       </section>
 
       <section className="ieuk-reveal mt-10 space-y-6 [--ieuk-delay:280ms]">
@@ -168,11 +157,8 @@ export default function DiplomaProgram() {
           <p className="text-neutral-700">
             ​Academic integrity is the foundation of honest, ethical, and
             authentic learning. At IEUK and our partner institutes, we expect
-            all students to act with{' '}
-            <strong className="font-semibold text-neutral-950">
-              honesty, trust, and fairness
-            </strong>{' '}
-            in all academic work. This ensures that the diploma you earn truly
+            all students to act with honesty, trust, and fairness in all
+            academic work. This ensures that the diploma you earn truly
             reflects your skills, knowledge, and dedication.
           </p>
         </article>
@@ -242,12 +228,8 @@ export default function DiplomaProgram() {
               formatting and referencing style (e.g., Harvard or APA).
             </li>
             <li>
-              ​Understand that{' '}
-              <strong className="font-semibold text-neutral-950">
-                close paraphrasing
-              </strong>{' '}
-              (merely rearranging or changing a few words from a source) still
-              requires a proper citation.
+              ​Understand that close paraphrasing (merely rearranging or changing
+              a few words from a source) still requires a proper citation.
             </li>
             <li>
               ​Manage your time effectively to reduce the temptation to take
@@ -295,16 +277,11 @@ export default function DiplomaProgram() {
               ​Mandatory resubmission of the assignment with a capped grade.
             </li>
             <li>
-              ​A mark of{' '}
-              <strong className="font-semibold text-neutral-950">zero</strong>{' '}
-              for the affected module or assessment component.
+              ​A mark of zero for the affected module or assessment component.
             </li>
             <li>
-              ​Disqualification from the module or immediate expulsion from the{' '}
-              <strong className="font-semibold text-neutral-950">
-                Diploma in Professional English Communication
-              </strong>{' '}
-              program.
+              ​Disqualification from the module or immediate expulsion from the
+              Diploma in Professional English Communication program.
             </li>
           </ul>
         </article>
@@ -320,12 +297,9 @@ export default function DiplomaProgram() {
             International English UK maintains a strict stance against any
             unauthorized or misleading marketing to protect the integrity of the
             qualification. It has come to light that certain unaccredited and
-            completely unrelated institutes may be deceptively
-            advertising or offering the{' '}
-            <strong className="font-semibold text-neutral-950">
-              Diploma in Professional English Communication
-            </strong>
-            . ​To maintain transparency and assist partners, students, and
+            completely unrelated institutes may be deceptively advertising or
+            offering the Diploma in Professional English Communication. ​To
+            maintain transparency and assist partners, students, and
             stakeholders in identifying these unauthorized entities, here is an
             official breakdown of how to identify and report this suspicious
             activity.
